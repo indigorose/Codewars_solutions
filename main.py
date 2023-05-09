@@ -43,6 +43,7 @@ def xor(a, b):
     #     return False
     return a != b
 
+
 #  != is the equivalent of is not
 
 
@@ -56,7 +57,37 @@ def high_and_low(numbers):
     return f'{max(x)}, {min(x)}'
 
 
-print(high_and_low("8 3 -5 42 -1 0 0 -9 4 7 4 -4"))
+# print(high_and_low("8 3 -5 42 -1 0 0 -9 4 7 4 -4"))
+
+
+def stray(arr):
+    least_common = min(set(arr), key=arr.count)
+    return least_common
+
+
+# print(stray([1, 1, 1, 1, 1, 1, 2]))
+
+
+def to_jaden_case(string):
+    # result = ""
+    # x = string.split()
+    # for i in x:
+    #     if len(result) > 0:
+    #         result = result + " " + i.strip().capitalize()
+    #     else:
+    #         result = i.capitalize()
+    # if not result:
+    #     return string
+    # else:
+    #     return result
+
+    return " ".join(word.capitalize() for word in string.split())
+
+
+print(to_jaden_case("How can mirrors be real if our eyes aren't real"))
+
+
+
 
 
 
