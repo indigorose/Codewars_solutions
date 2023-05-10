@@ -84,7 +84,35 @@ def to_jaden_case(string):
     return " ".join(word.capitalize() for word in string.split())
 
 
-print(to_jaden_case("How can mirrors be real if our eyes aren't real"))
+# print(to_jaden_case("How can mirrors be real if our eyes aren't real"))
+
+
+def boolean_to_string(b):
+    return str(b)
+
+
+def better_than_average(class_points, your_points):
+    x = sum(class_points)/len(class_points)
+    if x <= your_points:
+        return True
+    else:
+        return False
+
+
+# print(better_than_average([100, 40, 34, 57, 29, 72, 57, 88], 75))
+
+
+def get_middle(s):
+    x = list(s)
+    y = len(x)
+    print(y)
+    if y % 2 == 0:
+        return str(x[(y//2)-1] + x[y//2])
+    else:
+        return str(x[y//2])
+
+
+print(get_middle('test'))
 
 
 
