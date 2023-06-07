@@ -4,4 +4,4 @@ A repository of Javascript and Python codewars challenges.
 
 ## Codewars Profile
 
-https://www.codewars.com/users/indigorose/badges/small
+![Codewars](https://www.codewars.com/users/indigorose/badges/large)
