@@ -10,3 +10,4 @@ function lovefunc(flower1, flower2){
 }
 }
 // Opposites Attract 
+// return flower1 % 2 != flower2 % 2
