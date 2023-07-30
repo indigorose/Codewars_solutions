@@ -7,3 +7,14 @@ def century(year):
     
 def square_digits(num):
     return int("".join([str(int(i)**2)for i in str(num)]))
+
+def basic_op(operator, value1, value2):
+    if operator == "+":
+        return value1 + value2
+    elif operator == "-":
+        return value1 - value2
+    elif operator == "*":
+        return value1 * value2
+    else:
+        return value1 / value2, value1, value2):
+           
