@@ -17,4 +17,9 @@ def basic_op(operator, value1, value2):
         return value1 * value2
     else:
         return value1 / value2, value1, value2):
-           
+
+def check(seq, elem):
+    return elem in set(seq)
+    
+def other_angle(a, b):
+    return 180-(a+b)
