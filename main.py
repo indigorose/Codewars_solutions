@@ -28,3 +28,6 @@ def check(seq, elem):
 
 def other_angle(a, b):
     return 180-(a+b)
+    
+def repeat_str(repeat, string):
+    return repeat * string
