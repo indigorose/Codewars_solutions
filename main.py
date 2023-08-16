@@ -31,3 +31,6 @@ def other_angle(a, b):
     
 def repeat_str(repeat, string):
     return repeat * string
+    
+def duplicates(seq):
+    return list(set(seq))
