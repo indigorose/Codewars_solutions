@@ -33,4 +33,4 @@ def repeat_str(repeat, string):
     return repeat * string
     
 def duplicates(seq):
-    return list(set(seq))
+    return [seq[i] for i in range(len(seq)) if i == seq.index(seq[i])]
