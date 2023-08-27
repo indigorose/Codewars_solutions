@@ -28,9 +28,3 @@ def check(seq, elem):
 
 def other_angle(a, b):
     return 180-(a+b)
-    
-def repeat_str(repeat, string):
-    return repeat * string
-    
-def duplicates(seq):
-    return [seq[i] for i in range(len(seq)) if i == seq.index(seq[i])]
