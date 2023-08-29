@@ -39,3 +39,23 @@ def solution(s):
             words[-1].append(c)
     x = ["".join(word) for word in words]
     return " ".join(x)
+
+
+LETTERS = {
+    "A": "Alpha",  "B": "Bravo",   "C": "Charlie",
+    "D": "Delta",  "E": "Echo",    "F": "Foxtrot",
+    "G": "Golf",   "H": "Hotel",   "I": "India",
+    "J": "Juliett", "K": "Kilo",    "L": "Lima",
+    "M": "Mike",   "N": "November", "O": "Oscar",
+    "P": "Papa",   "Q": "Quebec",  "R": "Romeo",
+    "S": "Sierra", "T": "Tango",   "U": "Uniform",
+    "V": "Victor", "W": "Whiskey", "X": "X-ray",
+    "Y": "Yankee", "Z": "Zulu"}
+
+
+def nato(word):
+    return " ".join([LETTERS[i.upper()] for i in word])
+
+
+def even_or_odd(number):
+    return "Even" if number % 2 == 0 else "Odd"
