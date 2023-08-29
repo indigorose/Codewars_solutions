@@ -38,4 +38,10 @@ def solution(s):
             words[-1].append(c)
     x = ["".join(word) for word in words]
     return " ".join(x)
+    
+    
+# Add Nato dictionary LETTERS with capitalised keys 
+
+def nato(word):
+    return " ".join([LETTERS[i.upper()] for i in word])
         
