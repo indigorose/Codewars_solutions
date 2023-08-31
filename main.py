@@ -59,3 +59,11 @@ def nato(word):
 
 def even_or_odd(number):
     return "Even" if number % 2 == 0 else "Odd"
+
+
+def is_pangram(s):
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    for char in alphabet:
+        if char not in s.lower():
+            return False
+    return True
