@@ -7,4 +7,7 @@ def maximum(arr):
 def zero_fuel(distance_to_pump, mpg, fuel_left):
     #Happy Coding! ;)
     return True if fuel_left >= (distance_to_pump/mpg) else False
+    
+def return_five():
+    return len('hello')
 
