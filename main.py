@@ -67,3 +67,8 @@ def is_pangram(s):
         if char not in s.lower():
             return False
     return True
+
+
+def add_five(num):
+    total = num + 5
+    return total
