@@ -30,4 +30,11 @@ def get_planet_name(id):
             return "Uranus"  
         case 8:
             return "Neptune"
+            
 
+def small_enough(array, limit):
+    for i in array:
+        if i > limit:
+            return False
+    return True
+# alternative max(arr) <= limit
