@@ -38,3 +38,10 @@ def small_enough(array, limit):
             return False
     return True
 # alternative max(arr) <= limit
+def capitals(word):
+    return [word.index(i) for i in word if i.isupper()]
+    
+    
+    def hex_to_dec(s):
+    return int(s, 16)
+    
