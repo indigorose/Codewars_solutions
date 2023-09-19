@@ -41,7 +41,19 @@ def small_enough(array, limit):
 def capitals(word):
     return [word.index(i) for i in word if i.isupper()]
     
-    
-    def hex_to_dec(s):
+def hex_to_dec(s):
     return int(s, 16)
+    
+def update_light(current):
+    match current:
+        case "green":
+            return "yellow"
+        case 'yellow': 
+            return"red"
+        case 'red':
+            return 'green'
+
+
+
+
     
