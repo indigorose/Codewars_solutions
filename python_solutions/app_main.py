@@ -52,6 +52,15 @@ def update_light(current):
             return"red"
         case 'red':
             return 'green'
+            
+            
+            
+def combat(health, damage):
+    if health - damage > 0:
+        health -= damage
+        return health
+    else:
+        return  0
 
 
 
