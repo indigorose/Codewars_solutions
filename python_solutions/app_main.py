@@ -68,3 +68,10 @@ def combat(health, damage):
         return health
     else:
         return 0
+        
+def double_char(s):
+    x = ''
+    for i in s:
+        x += (i*2)
+    return x
+
