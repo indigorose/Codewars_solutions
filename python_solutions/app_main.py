@@ -75,3 +75,17 @@ def double_char(s):
         x += (i*2)
     return x
 
+
+
+def sum_digits(number):
+    total = 0
+    if number < 0:
+        x = -1*number
+        for i in str(x):
+            total += int(i)
+        return total
+    else:
+        for i in str(number):
+            total += int(i)
+        return total
+
