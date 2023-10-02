@@ -88,4 +88,8 @@ def sum_digits(number):
         for i in str(number):
             total += int(i)
         return total
+        
+        
+def greet (name, owner):
+    return 'Hello boss' if name == owner else 'Hello guest'
 
