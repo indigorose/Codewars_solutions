@@ -93,3 +93,8 @@ def sum_digits(number):
 def greet (name, owner):
     return 'Hello boss' if name == owner else 'Hello guest'
 
+def sum_two_smallest_numbers(numbers):
+    numbers.sort()
+    return numbers[0] + numbers[1]
+
+
