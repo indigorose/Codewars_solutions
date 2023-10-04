@@ -97,4 +97,8 @@ def sum_two_smallest_numbers(numbers):
     numbers.sort()
     return numbers[0] + numbers[1]
 
+def check_for_factor(base, factor):
+    return base % factor == 0
+
+
 
