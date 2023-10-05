@@ -99,6 +99,13 @@ def sum_two_smallest_numbers(numbers):
 
 def check_for_factor(base, factor):
     return base % factor == 0
+    
+    
+# def main [verb, noun]
+     #return verb + noun
+
+def main(verb, noun):
+    return verb + noun
 
 
 
