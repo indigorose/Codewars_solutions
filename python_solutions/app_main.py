@@ -107,5 +107,10 @@ def check_for_factor(base, factor):
 def main(verb, noun):
     return verb + noun
 
+def find_short(s):
+    # your code here
+    x = sorted(s.split(" "), key=len)
+    return len(x[0])
+
 
 
