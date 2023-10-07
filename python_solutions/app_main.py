@@ -112,5 +112,12 @@ def find_short(s):
     x = sorted(s.split(" "), key=len)
     return len(x[0])
 
+import re
+def replace_dots(str):
+    return re.sub(r'\.', '-', str)
+    # we must use r'\.' to ensure it picks up the dots
+
+
+
 
 
