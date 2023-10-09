@@ -122,3 +122,18 @@ def replace_dots(str):
 
 def open_or_senior(data):
     return [('Senior' if i[0] >= 55 and i[1] > 7 else 'Open') for i in data]
+
+
+def two_highest(arg1):
+    arg1.sort(reverse=True)
+    if len(arg1) >= 2:
+        x = []
+        for i in arg1:
+            if i not in x:
+                x.append(i)
+        return [x[0], x[1]] 
+    else:
+        return arg1
+
+
+
