@@ -134,6 +134,12 @@ def two_highest(arg1):
         return [x[0], x[1]] 
     else:
         return arg1
+        
+        
+def sum_mix(arr):
+    return sum([int(i) for i in arr])
+
+
 
 
 
