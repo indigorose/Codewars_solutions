@@ -142,4 +142,20 @@ def sum_mix(arr):
 def apple(x):
     return 'It\'s hotter than the sun!!' if int(x)**2 > 1000 else 'Help yourself to a honeycomb Yorkie for the glovebox.'
 
-
+def number(lines):
+    x = []
+    y = 1
+    for i in lines:
+        if i == "":
+            x.append(f"{y}: {i}")
+            y+=1
+        else:
+            x.append(f'{y}: {i}')
+            y+=1
+    return x
+    
+    
+    
+    
+#def number(lines):
+  #return ['%d: %s' % v for v in enumerate(lines, 1)]
