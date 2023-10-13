@@ -152,10 +152,15 @@ def number(lines):
         else:
             x.append(f'{y}: {i}')
             y+=1
-    return x
-    
+    return x    
     
     
     
 #def number(lines):
   #return ['%d: %s' % v for v in enumerate(lines, 1)]
+
+
+def move(position, roll):
+    return position + (roll * 2)
+
+
