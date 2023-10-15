@@ -163,4 +163,10 @@ def number(lines):
 def move(position, roll):
     return position + (roll * 2)
 
+#def say_hello(name):
+#"Hello"
+
+
+def say_hello(name):
+    return f"Hello, {name}"
 
