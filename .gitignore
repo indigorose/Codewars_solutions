@@ -10,3 +10,4 @@ python_solutions/codewars_testing.py
 .idea/
 .vscode/settings.json
 .vscode
+python_solutions/python_test.py
