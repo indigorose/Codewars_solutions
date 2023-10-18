@@ -170,3 +170,15 @@ def move(position, roll):
 def say_hello(name):
     return f"Hello, {name}"
 
+def remove_smallest(numbers):
+    if len(numbers) <= 1:
+        return [] 
+    else: 
+        for number in numbers[:len(numbers)]:
+            if number == min(numbers):
+                numbers.remove(number)
+                break
+        return numbers
+
+
+
