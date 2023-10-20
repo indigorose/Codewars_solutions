@@ -180,5 +180,8 @@ def remove_smallest(numbers):
                 break
         return numbers
 
+def remove(s):
+    return s[:-1] if len(s) >=2 and s[-1] == "!" else s
+
 
 
