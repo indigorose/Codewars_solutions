@@ -184,4 +184,8 @@ def remove(s):
     return s[:-1] if len(s) >=2 and s[-1] == "!" else s
 
 
-
+def sum_of_minimums(numbers):
+    x = []
+    for i in numbers:
+        x.append(min(i))
+    return sum(x)
