@@ -189,3 +189,9 @@ def sum_of_minimums(numbers):
     for i in numbers:
         x.append(min(i))
     return sum(x)
+
+
+def find_average(nums):
+    return sum(nums)/len(nums) if sum(nums) >=1 else 0
+
+
