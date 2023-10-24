@@ -195,3 +195,15 @@ def find_average(nums):
     return sum(nums)/len(nums) if sum(nums) >=1 else 0
 
 
+def unique_in_order(sequence):
+    x = []
+    if len(sequence) >= 2:
+        for i in sequence:
+            if i not in x or i != x[-1]:
+                x.append(i)
+        return x
+    else: 
+        return list(sequence)
+    
+
+
