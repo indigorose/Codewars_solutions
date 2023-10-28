@@ -205,5 +205,6 @@ def unique_in_order(sequence):
     else: 
         return list(sequence)
     
-
+def odd_or_even(arr):
+    return 'even'if sum(arr) % 2 == 0 else 'odd'
 
