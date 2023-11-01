@@ -231,3 +231,12 @@ def mouth_size(animal):
     else:
         return 'wide'
 
+def no_odds(values):
+    x = []
+    if len(values) >= 1:
+        for i in values:
+            if abs(i) % 2 == 0:
+                x.append(i)
+    return x
+
+
