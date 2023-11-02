@@ -239,4 +239,10 @@ def no_odds(values):
                 x.append(i)
     return x
 
+def summation(num):
+    return sum([i for i in range(1, 1+num)])
+    
+
+
+
 
