@@ -242,7 +242,8 @@ def no_odds(values):
 def summation(num):
     return sum([i for i in range(1, 1+num)])
     
-
+#build_string(*args):
+    #return "I like {1}!".format(",".join(args))
 
 
 
