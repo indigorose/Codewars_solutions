@@ -271,3 +271,10 @@ def sum_list(list):
 
 
 print(sum_list(list))
+
+
+
+def remove(s):
+    return s.replace("!", "")+"!"
+
+
