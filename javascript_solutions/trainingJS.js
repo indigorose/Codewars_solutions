@@ -1,0 +1,45 @@
+// Training JS #1: create your first JS function and print 'Hello World!'
+
+function helloWorld() {
+	var str = 'Hello World!';
+	console.log(str);
+}
+// Training JS #2: Basic data types--Number
+
+let v1 = 50,
+	v2 = 100,
+	v3 = 150,
+	v4 = 200,
+	v5 = 2,
+	v6 = 250;
+
+function equal1() {
+	let a = v1,
+		b = v1;
+	return a + b;
+}
+
+//Please refer to the example above to complete the following functions
+function equal2() {
+	let a = v3, //set number value to a
+		b = v1; //set number value to b
+	return a - b;
+}
+
+function equal3() {
+	let a = v1, //set number value to a
+		b = v5; //set number value to b
+	return a * b;
+}
+
+function equal4() {
+	let a = v4, //set number value to a
+		b = v5; //set number value to b
+	return a / b;
+}
+
+function equal5() {
+	let a = v2, //set number value to a
+		b = v4; //set number value to b
+	return a % b;
+}
