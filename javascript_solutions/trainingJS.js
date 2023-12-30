@@ -75,7 +75,7 @@ function answer3(){
   return "yes";
 }
 
-// Training JS #4: Arrays
+// Training JS #4: Basic data types--Arrays
 
 function getLength(arr){
   //return length of arr
