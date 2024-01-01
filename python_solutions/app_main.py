@@ -278,3 +278,8 @@ def remove(s):
     return s.replace("!", "")+"!"
 
 
+def check(a, x): 
+    # your code here
+    return  True if x in a else False
+
+
