@@ -171,3 +171,20 @@ function howManydays(month) {
 	}
 	return days;
 }
+
+// Training JS #9: Loop statement - while and do..while
+
+function padIt(str, n) {
+	var num = 1;
+	var result = str;
+	while (num <= n) {
+		if (num % 2 != 0) {
+			result = '*' + result;
+			num++;
+		} else {
+			result = result + '*';
+			num++;
+		}
+	}
+	return result;
+}
