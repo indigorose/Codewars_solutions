@@ -223,3 +223,22 @@ function grabDoll(dolls) {
 
 	return bag;
 }
+
+// Training JS #12: loop statement--for..in and for..of
+
+function giveMeFive(obj) {
+	var arr = [];
+	for (key in obj) {
+		if (key.length == 5 && obj[key].length != 5) {
+			arr.push(key);
+		} else if (key.length != 5 && obj[key].length == 5) {
+			arr.push(obj[key]);
+		} else if (key.length == 5 && obj[key].length == 5) {
+			arr.push(key);
+			arr.push(obj[key]);
+		} else {
+			continue;
+		}
+	}
+	return arr;
+}
