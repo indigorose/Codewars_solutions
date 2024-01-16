@@ -260,3 +260,24 @@ function whatNumberIsIt(n) {
 		return 'Input number is Number.NaN';
 	}
 }
+
+// Training JS #14: Methods of Number object -- toString() and toLocaleString()
+
+function colorOf(r, g, b) {
+	w = r.toString(16);
+	if (w.length <= 1) {
+		w = '0' + w;
+	}
+	e = g.toString(16);
+	if (e.length <= 1) {
+		e = '0' + e;
+		console.log(e);
+	}
+	v = b.toString(16);
+	if (v.length <= 1) {
+		v = '0' + v;
+		console.log(e);
+	}
+
+	return `#${w}${e}${v}`;
+}
