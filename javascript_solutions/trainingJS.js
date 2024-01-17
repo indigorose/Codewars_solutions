@@ -281,3 +281,17 @@ function colorOf(r, g, b) {
 
 	return `#${w}${e}${v}`;
 }
+
+// Training JS #15: Mehtods of Number object --toFixed(), toExponential()and toPrecision()
+
+function howManySmaller(arr, n) {
+	let count = 0;
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i].toFixed(2) < n) {
+			count += 1;
+		}
+	}
+	return count;
+}
+
+console.log(howManySmaller([1.234, 1.235, 1.228], 1.24));
