@@ -295,3 +295,18 @@ function howManySmaller(arr, n) {
 }
 
 console.log(howManySmaller([1.234, 1.235, 1.228], 1.24));
+
+// Training JS #16: Methods of String object --slice(), substring() and substr()
+
+function cutIt(arr) {
+	let slicedArr = arr.map(function (element) {
+		let s = arr[0].length;
+		for (let i = 0; i < arr.length; i++) {
+			if (arr[i].length <= s) {
+				s = arr[i].length;
+			}
+		}
+		return element.slice(0, s);
+	});
+	return slicedArr;
+}
