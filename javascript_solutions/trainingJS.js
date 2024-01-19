@@ -310,3 +310,14 @@ function cutIt(arr) {
 	});
 	return slicedArr;
 }
+
+// Training JS #17: Methods of String object --indexOf(), lastIndexOf() and search()
+
+function firstToLast(str, c) {
+	if (str.search(c) == -1) {
+		return -1;
+	} else {
+		let result = str.lastIndexOf(c) - str.indexOf(c);
+		return result;
+	}
+}
