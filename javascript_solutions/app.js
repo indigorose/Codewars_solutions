@@ -38,4 +38,24 @@ function colorOf(r, g, b) {
 	return `#${w}${e}${v}`;
 }
 
-console.log(colorOf(255, 0, 0));
+// console.log(colorOf(255, 0, 0));
+function splitAndMerge(string, separator) {
+	let split = string.split(' ');
+	let result = [];
+	for (let word in split) {
+		result.push(split[word].split('').join(separator));
+	}
+	return result.join(' ');
+}
+
+// console.log(splitAndMerge('My name is John', ' '));
+
+function alienLanguage(str) {
+	let words = str.toUpperCase().split(' ');
+	for (let i = 0; i < words.length; i++) {
+		words[i] = words[i][words[i].length - 1];
+	}
+	return words.join(' ');
+}
+
+console.log(alienLanguage('My name is example'));

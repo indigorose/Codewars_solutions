@@ -321,3 +321,14 @@ function firstToLast(str, c) {
 		return result;
 	}
 }
+
+// Training JS #18: Methods of String object --concat()split()and its good friend join()
+
+function splitAndMerge(string, separator) {
+	let split = string.split(' ');
+	let result = [];
+	for (let word in split) {
+		result.push(split[word].split('').join(separator));
+	}
+	return result.join(' ');
+}
