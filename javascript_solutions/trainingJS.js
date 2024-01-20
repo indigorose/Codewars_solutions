@@ -332,3 +332,14 @@ function splitAndMerge(string, separator) {
 	}
 	return result.join(' ');
 }
+
+// Training JS #19: Methods of String object -- toUpperCase(), to LowerCase() and replace()
+
+function alienLanguage(str) {
+	let words = str.toUpperCase().split(' ');
+	for (let i = 0; i < words.length; i++) {
+		let replaceLetter = words[i][words[i].length - 1].toLowerCase();
+		words[i] = words[i].slice(0, -1) + replaceLetter;
+	}
+	return words.join(' ');
+}

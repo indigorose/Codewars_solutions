@@ -53,7 +53,8 @@ function splitAndMerge(string, separator) {
 function alienLanguage(str) {
 	let words = str.toUpperCase().split(' ');
 	for (let i = 0; i < words.length; i++) {
-		words[i] = words[i][words[i].length - 1];
+		let replaceLetter = words[i][words[i].length - 1].toLowerCase();
+		words[i] = words[i].slice(0, -1) + replaceLetter;
 	}
 	return words.join(' ');
 }
