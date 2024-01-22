@@ -72,3 +72,7 @@ def is_pangram(s):
 def add_five(num):
     total = num + 5
     return total
+
+
+def is_uppercase(inp):
+    return True if inp == inp.upper() else False
