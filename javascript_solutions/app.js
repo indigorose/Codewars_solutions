@@ -82,3 +82,8 @@ function sumOfDifferences(arr) {
 }
 
 console.log(sumOfDifferences([1, 2, 10]));
+
+function remainder(n, m) {
+	// Divide the larger argument by the smaller argument and return the remainder
+	return n > m ? n % m : m % n;
+}
