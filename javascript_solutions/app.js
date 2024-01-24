@@ -87,3 +87,15 @@ function remainder(n, m) {
 	// Divide the larger argument by the smaller argument and return the remainder
 	return n > m ? n % m : m % n;
 }
+
+function nthChar(words) {
+	result = [];
+	if (words.length == 0) {
+		return '';
+	} else {
+		for (let i = 0; i < words.length; i++) {
+			result.push(words[i].charAt(i));
+		}
+	}
+	return result.join('');
+}
