@@ -99,3 +99,8 @@ function nthChar(words) {
 	}
 	return result.join('');
 }
+
+function include(arr, item){
+  // ...
+  return arr.includes(item)
+}
