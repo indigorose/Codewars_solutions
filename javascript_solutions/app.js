@@ -100,7 +100,27 @@ function nthChar(words) {
 	return result.join('');
 }
 
-function include(arr, item){
-  // ...
-  return arr.includes(item)
+function include(arr, item) {
+	// ...
+	return arr.includes(item);
 }
+
+function well(x) {
+	let counter = {};
+	x.forEach((ele) => {
+		if (counter[ele]) {
+			counter[ele] += 1;
+		} else {
+			counter[ele] = 1;
+		}
+	});
+	console.log(counter);
+	console.log(counter['good']);
+	return counter['good'] == 0
+		? 'Fail'
+		: 0 < counter['good'] <= 2
+		? 'Publish!'
+		: 'I smell a series!';
+}
+
+console.log(well(['bad', 'bad', 'bad']));
