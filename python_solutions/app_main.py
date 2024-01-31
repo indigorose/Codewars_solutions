@@ -242,3 +242,10 @@ def summation(num):
 
 # build_string(*args):
     # return "I like {1}!".format(",".join(args))
+
+
+def lovefunc(flower1, flower2):
+    if (flower1 % 2 == 0 and flower2 % 2 == 1) or (flower1 % 2 == 1 and flower2 % 2 == 0):
+        return True
+    else:
+        return False
