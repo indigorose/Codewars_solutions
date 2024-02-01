@@ -249,3 +249,7 @@ def lovefunc(flower1, flower2):
         return True
     else:
         return False
+
+
+def nth_even(n):
+    return (n*2)-2
