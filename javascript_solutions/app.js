@@ -135,18 +135,15 @@ function divisibleBy(numbers, divisor) {
 	return result;
 }
 
-
 function hello(name) {
-  if (name == null){
- return "Hello, World!"}
-let result = name.toLowerCase()
-if (result == "") {
-return "Hello, World!"} else {
-result = result.charAt(0).toUpperCase()+result.slice(1)
-  return `Hello, ${result}!`;
+	if (name == null) {
+		return 'Hello, World!';
+	}
+	let result = name.toLowerCase();
+	if (result == '') {
+		return 'Hello, World!';
+	} else {
+		result = result.charAt(0).toUpperCase() + result.slice(1);
+		return `Hello, ${result}!`;
+	}
 }
-  
-}
-
-
-
