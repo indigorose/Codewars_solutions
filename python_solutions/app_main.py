@@ -253,3 +253,20 @@ def lovefunc(flower1, flower2):
 
 def nth_even(n):
     return (n*2)-2
+
+
+# def add(s1, s2):
+#     s1 = s1.encode()
+#     s2 = s2.encode()
+#     s1 = sum(s1)
+#     s2 = sum(s1)
+#     return s1+s2
+
+def add(s1, s2):
+    r1 = [ord(c) for c in s1]
+    r2 = [ord(d) for d in s2]
+    return sum(r1) + sum(r2)
+
+
+def is_loch_ness_monster(string):
+    return any(x in string for x in ['3.50', 'three fifty', 'tree fiddy'])
