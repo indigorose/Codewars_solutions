@@ -270,3 +270,28 @@ def add(s1, s2):
 
 def is_loch_ness_monster(string):
     return any(x in string for x in ['3.50', 'three fifty', 'tree fiddy'])
+
+
+class Ball():
+    ball_type = 'regular'
+
+    def __init__(self, ball_type=None):
+        if ball_type is not None:
+            self.ball_type = ball_type
+
+
+def testit(string):
+    if string == '':
+        return ''
+    else:
+        words = string.split()
+        modified_words = []
+        for i, word in enumerate(words):
+            if len(word) > 1:
+                modified_words.append(word[:-1] + word[-1].upper())
+            else:
+                modified_words.append(word[0].upper())
+        return ' '.join(modified_words)
+
+# def testit(s):
+#     return s[::-1].title()[::-1]
