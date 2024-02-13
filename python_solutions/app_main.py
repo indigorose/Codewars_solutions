@@ -315,3 +315,29 @@ def whatday(num):
             return 'Saturday'
         case _:
             return 'Wrong, please enter a number between 1 and 7'
+
+
+def encode(st):
+    word = ([*st])
+    e_list = {"a": "1", "e": "2", "i": "3", "o": "4", "u": "5"}
+    result = []
+    for i in word:
+        if i in e_list:
+            result.append(e_list[i])
+        else:
+            result.append(i)
+
+    return "".join(result)
+
+
+def decode(st):
+    word = ([*st])
+    e_list = {"1": "a", "2": "e", "3": "i",  "4": "o", "5": "u"}
+    result = []
+    for i in word:
+        if i in e_list:
+            result.append(e_list[i])
+        else:
+            result.append(i)
+
+    return "".join(result)
