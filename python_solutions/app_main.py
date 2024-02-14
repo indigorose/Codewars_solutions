@@ -341,3 +341,12 @@ def decode(st):
             result.append(i)
 
     return "".join(result)
+
+
+
+
+def digits(n):
+    l = str(n)
+    return len([*l])
+
+
