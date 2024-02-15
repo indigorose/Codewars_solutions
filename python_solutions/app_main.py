@@ -349,4 +349,7 @@ def digits(n):
     l = str(n)
     return len([*l])
 
+def greet(name): 
+    return f"Hello {name.title()}!"
+
 
