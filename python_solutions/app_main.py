@@ -358,3 +358,7 @@ def digits(n):
 
 # def greet(name):
 #     return f"Hello {name.title()}!"
+
+
+
+# Check integer question 
