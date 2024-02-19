@@ -360,5 +360,12 @@ def digits(n):
 #     return f"Hello {name.title()}!"
 
 
+# Check integer question
 
-# Check integer question 
+def arrow_area(a, b):
+    c = 0.5 * (0.5 * a) * (0.5 * b)
+    return c*2
+
+
+# def arrow_area(a, b):
+#     return a * b / 4.0
