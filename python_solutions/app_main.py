@@ -369,3 +369,9 @@ def arrow_area(a, b):
 
 # def arrow_area(a, b):
 #     return a * b / 4.0
+def multiply(n):
+    return n*(pow(5,len(str(abs(n)))))
+
+
+
+
