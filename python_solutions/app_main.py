@@ -370,8 +370,8 @@ def arrow_area(a, b):
 # def arrow_area(a, b):
 #     return a * b / 4.0
 def multiply(n):
-    return n*(pow(5,len(str(abs(n)))))
+    return n*(pow(5, len(str(abs(n)))))
 
 
-
-
+def usdcny(usd):
+    return f'{format(usd * 6.75, ".2f")} Chinese Yuan'
