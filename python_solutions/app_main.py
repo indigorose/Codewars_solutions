@@ -375,3 +375,9 @@ def multiply(n):
 
 def usdcny(usd):
     return f'{format(usd * 6.75, ".2f")} Chinese Yuan'
+
+
+def name_shuffler(str_):
+    s = str_.split(" ")
+    s.reverse()
+    return " ".join(s)
