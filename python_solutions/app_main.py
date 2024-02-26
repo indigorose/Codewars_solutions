@@ -381,3 +381,11 @@ def name_shuffler(str_):
     s = str_.split(" ")
     s.reverse()
     return " ".join(s)
+
+
+database = [("english", "Welcome"), ("czech", "Vitejte"), ("danish", "Velkomst"), ("dutch", "Welkom"), ("estonian", "Tere tulemast"), ("finnish", "Tervetuloa"), ("flemish", "Welgekomen"), ("french", "Bienvenue"), ("german", "Willkommen"), ("irish", "Failte"), ("italian", "Benvenuto"), ("latvian", "Gaidits"), ("lithuanian", "Laukiamas"), ("polish", "Witamy"), ("spanish", "Bienvenido"), ("swedish", "Valkommen"), ("welsh", "Croeso")
+            ]
+
+
+def greet_(language):
+    return next((i[1] for i in database if i[0] == language), 'Welcome')
