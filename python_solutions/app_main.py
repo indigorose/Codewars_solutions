@@ -389,3 +389,10 @@ database = [("english", "Welcome"), ("czech", "Vitejte"), ("danish", "Velkomst")
 
 def greet_(language):
     return next((i[1] for i in database if i[0] == language), 'Welcome')
+
+
+
+def sale_hotdogs(n):
+    return 100*n if n < 5 else n*95 if 5 <= n<10 else 90*n
+
+
