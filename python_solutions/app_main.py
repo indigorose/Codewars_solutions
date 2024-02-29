@@ -398,3 +398,8 @@ def sale_hotdogs(n):
 def largest_pair_sum(numbers):
     numbers.sort()
     return numbers[-2] + numbers[-1]
+    
+def bin_to_decimal(inp):
+    return int(inp, 2)
+    
+
