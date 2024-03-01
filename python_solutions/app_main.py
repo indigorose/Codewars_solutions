@@ -398,15 +398,3 @@ def sale_hotdogs(n):
 def largest_pair_sum(numbers):
     numbers.sort()
     return numbers[-2] + numbers[-1]
-
-
-def monkey_count(n):
-    return [x for x in range(1, n+1)]
-
-
-def solution(nums):
-    if nums is None:
-        return []
-    else:
-        nums.sort()
-        return nums
