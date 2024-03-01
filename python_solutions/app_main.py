@@ -410,3 +410,7 @@ def solution(nums):
     else:
         nums.sort()
         return nums
+
+
+def bin_to_decimal(inp):
+    return int(inp, 2)
