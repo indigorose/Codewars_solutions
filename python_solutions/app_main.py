@@ -414,3 +414,7 @@ def solution(nums):
 
 def bin_to_decimal(inp):
     return int(inp, 2)
+
+
+def reverse_letter(st):
+    return "".join(filter(lambda x: (x.isalpha()), [a for a in st[::-1]]))
