@@ -8,3 +8,6 @@ def cannons_ready(gunners):
             nay += 1
 
     return 'Shiver me timbers!' if nay >= 1 else 'Fire!'
+
+
+print(cannons_ready({"john": "nay", "fred": 'aye', "jim": "aye"}))
