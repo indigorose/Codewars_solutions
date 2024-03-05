@@ -418,3 +418,9 @@ def bin_to_decimal(inp):
 
 def reverse_letter(st):
     return "".join(filter(lambda x: (x.isalpha()), [a for a in st[::-1]]))
+
+
+class Sleigh(object):
+    def authenticate(self, name, password):
+        return [name, password] == ["Santa Claus", "Ho Ho Ho!"]
+
