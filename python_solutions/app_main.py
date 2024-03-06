@@ -424,3 +424,6 @@ class Sleigh(object):
     def authenticate(self, name, password):
         return [name, password] == ["Santa Claus", "Ho Ho Ho!"]
 
+
+def past(h, m, s):
+    return ((h*3600) + (m * 60) + s) * 1000
