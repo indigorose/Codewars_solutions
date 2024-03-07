@@ -427,3 +427,7 @@ class Sleigh(object):
 
 def past(h, m, s):
     return ((h*3600) + (m * 60) + s) * 1000
+
+
+def is_it_letter(s):
+    return s.isupper() or s.islower()
