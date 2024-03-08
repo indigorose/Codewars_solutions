@@ -431,3 +431,9 @@ def past(h, m, s):
 
 def is_it_letter(s):
     return s.isupper() or s.islower()
+
+
+def sort_gift_code(code):
+    x = [c for c in code]
+    x.sort()
+    return "".join(x)
