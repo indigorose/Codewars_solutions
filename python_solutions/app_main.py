@@ -437,3 +437,7 @@ def sort_gift_code(code):
     x = [c for c in code]
     x.sort()
     return "".join(x)
+
+
+def merge_arrays(arr1, arr2):
+    return list(dict.fromkeys(sorted(arr1+arr2)))
