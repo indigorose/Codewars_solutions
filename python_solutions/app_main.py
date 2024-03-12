@@ -441,3 +441,10 @@ def sort_gift_code(code):
 
 def merge_arrays(arr1, arr2):
     return list(dict.fromkeys(sorted(arr1+arr2)))
+
+def nearest_square(n):
+  return round(n**0.5)**2
+
+
+
+
