@@ -446,5 +446,9 @@ def nearest_square(n):
   return round(n**0.5)**2
 
 
-
+def sum_cubes(n):
+    result = 0
+    for i in range(0,n+1):
+        result += pow(i,3)
+    return result
 
