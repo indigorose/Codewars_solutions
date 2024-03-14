@@ -442,13 +442,17 @@ def sort_gift_code(code):
 def merge_arrays(arr1, arr2):
     return list(dict.fromkeys(sorted(arr1+arr2)))
 
+
 def nearest_square(n):
-  return round(n**0.5)**2
+    return round(n**0.5)**2
 
 
 def sum_cubes(n):
     result = 0
-    for i in range(0,n+1):
-        result += pow(i,3)
+    for i in range(0, n+1):
+        result += pow(i, 3)
     return result
 
+
+def div_con(x):
+    return sum([i for i in x if isinstance(i, int)]) - sum([int(i) for i in x if isinstance(i, str)])
