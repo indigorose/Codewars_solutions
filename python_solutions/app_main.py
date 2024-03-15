@@ -456,3 +456,7 @@ def sum_cubes(n):
 
 def div_con(x):
     return sum([i for i in x if isinstance(i, int)]) - sum([int(i) for i in x if isinstance(i, str)])
+
+
+def float_to_array(arr):
+    return [float(i) for i in arr]
