@@ -460,3 +460,7 @@ def div_con(x):
 
 def float_to_array(arr):
     return [float(i) for i in arr]
+
+
+def two_are_positive(a, b, c):
+    return len([i for i in [a, b, c] if i > 0]) == 2
