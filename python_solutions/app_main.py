@@ -464,3 +464,17 @@ def float_to_array(arr):
 
 def two_are_positive(a, b, c):
     return len([i for i in [a, b, c] if i > 0]) == 2
+
+
+def leo(oscar):
+    if oscar > 88:
+        return "Leo got one already!"
+    elif oscar == 88:
+        return "Leo finally won the oscar! Leo is happy"
+    elif oscar == 86:
+        return  "Not even for Wolf of wallstreet?!"
+    else:
+        return "When will you give Leo an Oscar?" 
+
+
+
