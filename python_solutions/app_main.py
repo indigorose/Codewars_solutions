@@ -477,4 +477,12 @@ def leo(oscar):
         return "When will you give Leo an Oscar?" 
 
 
-
+def billboard(name, price=30):
+    cost = 0
+    for i in name:
+        cost += price
+    return cost
+    
+    
+    
+    
