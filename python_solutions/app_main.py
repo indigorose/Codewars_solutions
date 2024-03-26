@@ -472,9 +472,9 @@ def leo(oscar):
     elif oscar == 88:
         return "Leo finally won the oscar! Leo is happy"
     elif oscar == 86:
-        return  "Not even for Wolf of wallstreet?!"
+        return "Not even for Wolf of wallstreet?!"
     else:
-        return "When will you give Leo an Oscar?" 
+        return "When will you give Leo an Oscar?"
 
 
 def billboard(name, price=30):
@@ -482,7 +482,7 @@ def billboard(name, price=30):
     for i in name:
         cost += price
     return cost
-    
-    
-    
-    
+
+
+def get_number_from_string(st):
+    return int("".join([i for i in st if i.isdigit()]))
