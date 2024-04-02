@@ -193,3 +193,9 @@ function exponent(a, b) {
 function subt(a, b) {
 	return a - b;
 }
+
+function chromosomeCheck(sperm) {
+	return sperm == 'XX'
+		? "Congratulations! You're going to have a daughter."
+		: "Congratulations! You're going to have a son.";
+}

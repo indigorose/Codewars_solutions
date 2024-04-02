@@ -488,10 +488,11 @@ def get_number_from_string(st):
     return int("".join([i for i in st if i.isdigit()]))
 
 
-
-def even_numbers(arr,n):
+def even_numbers(arr, n):
     x = [i for i in arr if i % 2 == 0]
     y = len(x)-n
     return x[y:]
 
 
+def print_array(arr):
+    return ",".join([str(i) for i in arr])
