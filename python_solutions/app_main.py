@@ -507,4 +507,19 @@ def power_of_two(x):
             return False
         x = x // 2
     return True
+    
+    
+    
+def define_suit(card):
+    match card[-1]:
+        case 'S':
+            return 'spades'
+        case 'D':
+            return 'diamonds'
+        case 'H':
+            return 'hearts'
+        case 'C':
+            return 'clubs'
+        
+
 
