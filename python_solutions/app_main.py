@@ -522,4 +522,7 @@ def define_suit(card):
             return 'clubs'
         
 
+def multiple_of_index(arr):
+    return [arr[i] for i in range(len(arr)) if arr[i] == 0 or (i != 0 and arr[i] % i == 0)]
+
 
