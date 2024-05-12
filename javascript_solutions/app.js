@@ -199,3 +199,15 @@ function chromosomeCheck(sperm) {
 		? "Congratulations! You're going to have a daughter."
 		: "Congratulations! You're going to have a son.";
 }
+
+function digPow(n, p) {
+	const arr = Array.from(n.toString(), Number);
+	let count = 0;
+	let x = p;
+	for (let i = 0; i < arr.length; i++) {
+		count += Math.pow(arr[i], x);
+		x += 1;
+	}
+	return (count / n) % 1 != 0 ? count / n : -1;
+}
+console.log(digPow(89, 1));
