@@ -211,3 +211,7 @@ function digPow(n, p) {
 	return (count / n) % 1 != 0 ? count / n : -1;
 }
 console.log(digPow(89, 1));
+
+function twoDecimalPlaces(n) {
+  return Math.round(n*100)/100
+}
