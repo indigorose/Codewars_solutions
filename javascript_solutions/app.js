@@ -211,3 +211,16 @@ function digPow(n, p) {
 	return (count / n) % 1 != 0 ? count / n : -1;
 }
 console.log(digPow(89, 1));
+
+function gordon(a) {
+	let text = a.toUpperCase();
+	text = text.replaceAll('A', '@');
+	text = text.replaceAll(/[eiou]/gi, '*');
+	y = text.split(' ');
+	for (let i = 0; i < y.length; i++) {
+		y[i] += '!!!!';
+	}
+	return y.join(' ');
+}
+
+console.log(gordon('What feck damn cake'));
