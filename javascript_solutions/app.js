@@ -212,6 +212,10 @@ function digPow(n, p) {
 }
 console.log(digPow(89, 1));
 
+function twoDecimalPlaces(n) {
+	return Math.round(n * 100) / 100;
+}
+
 function gordon(a) {
 	let text = a.toUpperCase();
 	text = text.replaceAll('A', '@');
