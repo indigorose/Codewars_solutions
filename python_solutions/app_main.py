@@ -525,4 +525,11 @@ def define_suit(card):
 def multiple_of_index(arr):
     return [arr[i] for i in range(len(arr)) if arr[i] == 0 or (i != 0 and arr[i] % i == 0)]
 
-
+import time
+def make_me_slow():
+    ## This function is too fast! 
+    x = 0
+    for i in range(1000000):
+        x += i
+    time.sleep(7)
+    return x
