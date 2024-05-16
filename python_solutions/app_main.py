@@ -533,3 +533,8 @@ def make_me_slow():
         x += i
     time.sleep(7)
     return x
+
+def without_last(lst):
+    # Fix it
+    x = lst[:-1] # removes the last element
+    return x
