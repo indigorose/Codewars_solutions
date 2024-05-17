@@ -228,3 +228,13 @@ function gordon(a) {
 }
 
 console.log(gordon('What feck damn cake'));
+
+
+function multipleOfIndex(array) {
+  // good luck
+  let x =[]
+  for(let i=0; i <array.length; i++){
+if (array[i]%i== 0 || array[i]==0){ 
+x.push(array[i])}}
+return x
+}
