@@ -538,3 +538,12 @@ def without_last(lst):
     # Fix it
     x = lst[:-1] # removes the last element
     return x
+
+def find_uniq(arr):
+    from collections import Counter
+    counts = Counter(arr)
+    for key,count in counts.items():
+        if count == 1:
+            return key
+
+
