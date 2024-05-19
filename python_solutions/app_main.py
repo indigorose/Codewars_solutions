@@ -546,4 +546,8 @@ def find_uniq(arr):
         if count == 1:
             return key
 
+def find_missing(arr1, arr2):
+    for i in arr1:
+        if arr1.count(i) != arr2.count(i):
+            return i
 
