@@ -229,12 +229,24 @@ function gordon(a) {
 
 console.log(gordon('What feck damn cake'));
 
-
 function multipleOfIndex(array) {
-  // good luck
-  let x =[]
-  for(let i=0; i <array.length; i++){
-if (array[i]%i== 0 || array[i]==0){ 
-x.push(array[i])}}
-return x
+	// good luck
+	let x = [];
+	for (let i = 0; i < array.length; i++) {
+		if (array[i] % i == 0 || array[i] == 0) {
+			x.push(array[i]);
+		}
+	}
+	return x;
 }
+
+function sumDigits(number) {
+	let strNum = Math.abs(number).toString();
+	let result = 0;
+	for (let i = 0; i < strNum.length; i++) {
+		result += parseInt(strNum[i]);
+	}
+	return result;
+}
+
+console.log(sumDigits(10));
