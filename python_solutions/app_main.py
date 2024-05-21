@@ -551,3 +551,15 @@ def find_missing(arr1, arr2):
         if arr1.count(i) != arr2.count(i):
             return i
 
+def highest_rank(arr):
+    from collections import Counter
+    lst = Counter(arr)
+    temp = max(lst.values())
+    result = [key for key in lst if lst[key] == temp]
+    if len(result)== 1:
+        return result[0]
+    else:
+        result.sort(reverse=True)
+        return result[0]
+
+
