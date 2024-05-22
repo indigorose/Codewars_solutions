@@ -562,4 +562,9 @@ def highest_rank(arr):
         result.sort(reverse=True)
         return result[0]
 
-
+def only_duplicates(st):
+    lst = [char for char in st if st.count(char) >= 2]
+    return "".join(lst)
+    
+    
+    
