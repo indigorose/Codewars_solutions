@@ -250,3 +250,26 @@ function sumDigits(number) {
 }
 
 console.log(sumDigits(10));
+
+
+function findOdd(A) {
+  //happy coding!
+  const count = {};
+ 
+
+for (let ele of A) {
+
+    if (count[ele]) {
+
+        count[ele] += 1;
+
+    } else {
+
+        count[ele] = 1;
+
+    }
+}
+  for (const [key, value] of Object.entries(count)) {
+  if(value % 2 !=0){ 
+return parseInt(key)}
+}
