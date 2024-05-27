@@ -568,3 +568,5 @@ def only_duplicates(st):
     
     
     
+def invert(lst):
+    return [abs(i) if i < 0 else i*-1 for i in lst]
