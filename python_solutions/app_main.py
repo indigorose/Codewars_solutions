@@ -566,7 +566,12 @@ def only_duplicates(st):
     lst = [char for char in st if st.count(char) >= 2]
     return "".join(lst)
     
-    
+def lowercase_count(strng):
+    # Your code here
+    x=re.findall('[a-z]',strng)
+    return len(x)
+
+
     
 def invert(lst):
     return [abs(i) if i < 0 else i*-1 for i in lst]
