@@ -571,7 +571,8 @@ def lowercase_count(strng):
     x=re.findall('[a-z]',strng)
     return len(x)
 
-
+def domain_name(url):
+      return url.split("//")[-1].split("www.")[-1].split(".")[0]
     
 def invert(lst):
     return [abs(i) if i < 0 else i*-1 for i in lst]
