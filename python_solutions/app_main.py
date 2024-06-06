@@ -574,5 +574,16 @@ def lowercase_count(strng):
 def domain_name(url):
       return url.split("//")[-1].split("www.")[-1].split(".")[0]
     
+
+def delete_nth(order,max_e):
+    x = []
+    for i in order:
+        if x.count(i) < max_e:
+            x.append(i)
+    return x
+
+
+
+
 def invert(lst):
     return [abs(i) if i < 0 else i*-1 for i in lst]
