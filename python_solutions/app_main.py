@@ -588,3 +588,8 @@ def str_count(strng, letter):
 
 def invert(lst):
     return [abs(i) if i < 0 else i*-1 for i in lst]
+    
+def get_age(age):
+    return int(age.split(" ")[0])
+
+
