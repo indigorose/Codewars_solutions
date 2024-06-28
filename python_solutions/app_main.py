@@ -592,4 +592,6 @@ def invert(lst):
 def get_age(age):
     return int(age.split(" ")[0])
 
-
+class Solution:
+    def main(self, *args):
+        print("Hello World!")
