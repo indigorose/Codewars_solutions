@@ -595,3 +595,9 @@ def get_age(age):
 class Solution:
     def main(self, *args):
         print("Hello World!")
+        
+        
+
+def spot_diff(s1, s2):
+    result = [i for i in range(0, len(s1)) if s1[i] != s2[i]]
+    return result if len(result) >=1 else []
