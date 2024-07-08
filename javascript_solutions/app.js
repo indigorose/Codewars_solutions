@@ -275,4 +275,14 @@ function DNAtoRNA(dna) {
 
 }
 
+function rentalCarCost(d){
+   p=40
+  if (d<3){
+    return d*p
+  } else if (d<=6) {
+    return (d*p)- 20
+} else {
+ return (d*p)-50
+}
 
+} 
