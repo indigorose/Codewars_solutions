@@ -601,3 +601,15 @@ class Solution:
 def spot_diff(s1, s2):
     result = [i for i in range(0, len(s1)) if s1[i] != s2[i]]
     return result if len(result) >=1 else []
+
+def number_to_pwr(number, p): 
+    result = 1
+    x =[]
+    i=1
+    while i <= p:
+        x.append(number)
+        i+=1
+    for i in x:
+        result = result * number
+    return result
+
