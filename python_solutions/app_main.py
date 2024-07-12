@@ -613,3 +613,5 @@ def number_to_pwr(number, p):
         result = result * number
     return result
 
+def count_red_beads(n):
+    return 0 if n < 1 else (n-1) * 2
