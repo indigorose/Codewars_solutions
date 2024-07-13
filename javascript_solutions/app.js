@@ -301,3 +301,6 @@ function countRedBeads(n) {
   return  n > 1 ? (n-1) * 2 : 0
 }
 
+function hoopCount (n) {
+   return n >= 10 ? "Great, now move on to tricks" : "Keep at it until you get it"    
+}
