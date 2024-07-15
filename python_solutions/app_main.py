@@ -618,3 +618,7 @@ def count_red_beads(n):
     
 def str_count(strng, letter):
     return strng.count(letter)
+
+def get_age(age):
+    return int(age.split(" ")[0])
+
