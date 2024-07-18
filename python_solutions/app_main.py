@@ -622,3 +622,12 @@ def str_count(strng, letter):
 def get_age(age):
     return int(age.split(" ")[0])
 
+# How to draw trees
+def trees(height):
+    length = height * 2 - 1
+    stars = 1
+    for i in range(1, height + 1):
+        print(("*" * stars).center(length))
+        stars += 2
+    print("*".center(length))
+        
