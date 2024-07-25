@@ -633,5 +633,14 @@ def get_age(age):
     return int(age.split(" ")[0])
 
 
+def trees(height):
+    length = height * 2 - 1
+    stars = 1
+    for i in range(1, height + 1):
+        print(("*" * stars).center(length))
+        stars += 2
+    print("*".center(length))
+
+
 def problem(a):
     return (a * 50) + 6 if type(a) != str else "Error"
