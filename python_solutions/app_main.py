@@ -1,3 +1,4 @@
+import time
 import re
 
 
@@ -498,7 +499,6 @@ def print_array(arr):
     return ",".join([str(i) for i in arr])
 
 
-
 def power_of_two(x):
     if (x == 0):
         return False
@@ -507,9 +507,8 @@ def power_of_two(x):
             return False
         x = x // 2
     return True
-    
-    
-    
+
+
 def define_suit(card):
     match card[-1]:
         case 'S':
@@ -520,105 +519,119 @@ def define_suit(card):
             return 'hearts'
         case 'C':
             return 'clubs'
-        
+
 
 def multiple_of_index(arr):
     return [arr[i] for i in range(len(arr)) if arr[i] == 0 or (i != 0 and arr[i] % i == 0)]
 
-import time
+
 def make_me_slow():
-    ## This function is too fast! 
+    # This function is too fast!
     x = 0
     for i in range(1000000):
         x += i
     time.sleep(7)
     return x
 
+
 def without_last(lst):
     # Fix it
-    x = lst[:-1] # removes the last element
+    x = lst[:-1]  # removes the last element
     return x
+
 
 def find_uniq(arr):
     from collections import Counter
     counts = Counter(arr)
-    for key,count in counts.items():
+    for key, count in counts.items():
         if count == 1:
             return key
+
 
 def find_missing(arr1, arr2):
     for i in arr1:
         if arr1.count(i) != arr2.count(i):
             return i
 
+
 def highest_rank(arr):
     from collections import Counter
     lst = Counter(arr)
     temp = max(lst.values())
     result = [key for key in lst if lst[key] == temp]
-    if len(result)== 1:
+    if len(result) == 1:
         return result[0]
     else:
         result.sort(reverse=True)
         return result[0]
 
+
 def only_duplicates(st):
     lst = [char for char in st if st.count(char) >= 2]
     return "".join(lst)
-    
+
+
 def lowercase_count(strng):
     # Your code here
-    x=re.findall('[a-z]',strng)
+    x = re.findall('[a-z]', strng)
     return len(x)
 
-def domain_name(url):
-      return url.split("//")[-1].split("www.")[-1].split(".")[0]
-    
 
-def delete_nth(order,max_e):
+def domain_name(url):
+    return url.split("//")[-1].split("www.")[-1].split(".")[0]
+
+
+def delete_nth(order, max_e):
     x = []
     for i in order:
         if x.count(i) < max_e:
             x.append(i)
     return x
 
-def str_count(strng, letter):
-    return strng.count(letter)
+# def str_count(strng, letter):
+#     return strng.count(letter)
 
 
 def invert(lst):
     return [abs(i) if i < 0 else i*-1 for i in lst]
-    
-def get_age(age):
-    return int(age.split(" ")[0])
+
+# def get_age(age):
+#     return int(age.split(" ")[0])
+
 
 class Solution:
     def main(self, *args):
         print("Hello World!")
-        
-        
+
 
 def spot_diff(s1, s2):
     result = [i for i in range(0, len(s1)) if s1[i] != s2[i]]
-    return result if len(result) >=1 else []
+    return result if len(result) >= 1 else []
 
-def number_to_pwr(number, p): 
+
+def number_to_pwr(number, p):
     result = 1
-    x =[]
-    i=1
+    x = []
+    i = 1
     while i <= p:
         x.append(number)
-        i+=1
+        i += 1
     for i in x:
         result = result * number
     return result
 
+
 def count_red_beads(n):
     return 0 if n < 1 else (n-1) * 2
-    
+
+
 def str_count(strng, letter):
     return strng.count(letter)
+
 
 def get_age(age):
     return int(age.split(" ")[0])
 
+
+def problem(a):
+    return (a * 50) + 6 if type(a) != str else "Error"
