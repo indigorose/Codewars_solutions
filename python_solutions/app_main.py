@@ -654,3 +654,10 @@ class Ship:
 
     def is_worth_it(self):
         return self.draft - self.crew * 1.5 > 20
+
+# ASCII to character
+
+
+def get_char(c):
+    # Your code goes here ^_^
+    return chr(c)
