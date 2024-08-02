@@ -661,3 +661,12 @@ class Ship:
 def get_char(c):
     # Your code goes here ^_^
     return chr(c)
+
+# return missing element
+
+
+def get_missing_element(seq):
+    # your code here
+    for i in range(0, 10):
+        if i not in seq:
+            return i
