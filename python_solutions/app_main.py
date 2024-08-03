@@ -670,3 +670,8 @@ def get_missing_element(seq):
     for i in range(0, 10):
         if i not in seq:
             return i
+
+# Concise function
+
+
+def find(arr, el): return 'Not found'if el not in arr else arr.index(el)
