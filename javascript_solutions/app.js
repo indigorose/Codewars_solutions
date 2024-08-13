@@ -304,3 +304,15 @@ function countRedBeads(n) {
 function hoopCount (n) {
    return n >= 10 ? "Great, now move on to tricks" : "Keep at it until you get it"    
 }
+
+function friend(friends){
+  //your code here
+  let result = []
+  for(let i=0; i < friends.length; i++){
+      if (friends[i].length == 4){
+          result.push(friends[i])
+       }
+     }
+  return result
+}
+
