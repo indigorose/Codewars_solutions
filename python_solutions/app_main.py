@@ -675,3 +675,12 @@ def get_missing_element(seq):
 
 
 def find(arr, el): return 'Not found'if el not in arr else arr.index(el)
+
+
+def my_languages(results):
+    # your fantastic code here
+    x = sorted(results.items(), key=lambda x: x[1], reverse=True)
+    y = dict(x)
+
+    return [key for key, value in y.items() if value >= 60]
+#   return sorted((l for l,r in results.items() if r>=60), reverse=True, key=results.get)
