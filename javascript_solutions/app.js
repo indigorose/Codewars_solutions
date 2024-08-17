@@ -270,49 +270,55 @@ function findOdd(A) {
 }
 
 function DNAtoRNA(dna) {
-  // create a function which returns an RNA sequence from the given DNA sequence
-   return dna.replaceAll("T", "U")
-
+	// create a function which returns an RNA sequence from the given DNA sequence
+	return dna.replaceAll('T', 'U');
 }
 
-function rentalCarCost(d){
-   p=40
-  if (d<3){
-    return d*p
-  } else if (d<=6) {
-    return (d*p)- 20
-} else {
- return (d*p)-50
+function rentalCarCost(d) {
+	p = 40;
+	if (d < 3) {
+		return d * p;
+	} else if (d <= 6) {
+		return d * p - 20;
+	} else {
+		return d * p - 50;
+	}
 }
 
-} 
-
-function numberToPower(number, power){
-  console.info(Math.log2(1024));
-  // Code here
-  result = 1
-  for(let i = 0; i <power; i++){
-   result = number * result
-}
-  return result
+function numberToPower(number, power) {
+	console.info(Math.log2(1024));
+	// Code here
+	result = 1;
+	for (let i = 0; i < power; i++) {
+		result = number * result;
+	}
+	return result;
 }
 
 function countRedBeads(n) {
-  return  n > 1 ? (n-1) * 2 : 0
+	return n > 1 ? (n - 1) * 2 : 0;
 }
 
-function hoopCount (n) {
-   return n >= 10 ? "Great, now move on to tricks" : "Keep at it until you get it"    
+function hoopCount(n) {
+	return n >= 10
+		? 'Great, now move on to tricks'
+		: 'Keep at it until you get it';
 }
 
-function friend(friends){
-  //your code here
-  let result = []
-  for(let i=0; i < friends.length; i++){
-      if (friends[i].length == 4){
-          result.push(friends[i])
-       }
-     }
-  return result
+function friend(friends) {
+	//your code here
+	let result = [];
+	for (let i = 0; i < friends.length; i++) {
+		if (friends[i].length == 4) {
+			result.push(friends[i]);
+		}
+	}
+	return result;
 }
 
+var humanYearsCatYearsDogYears = function (n) {
+	let catYears = 15 + 9 * (n > 1) + 4 * (n - 2) * (n > 2);
+	let dogYears = 15 + 9 * (n > 1) + 5 * (n - 2) * (n > 2);
+
+	return [n, catYears, dogYears];
+};
