@@ -322,3 +322,8 @@ var humanYearsCatYearsDogYears = function (n) {
 
 	return [n, catYears, dogYears];
 };
+
+function howManyLightsabersDoYouOwn(name) {
+  return name == "Zach" ? 18 : 0
+}
+
