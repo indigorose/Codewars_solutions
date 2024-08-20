@@ -324,6 +324,5 @@ var humanYearsCatYearsDogYears = function (n) {
 };
 
 function howManyLightsabersDoYouOwn(name) {
-  return name == "Zach" ? 18 : 0
+	return name == 'Zach' ? 18 : 0;
 }
-

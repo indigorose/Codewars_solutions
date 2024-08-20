@@ -683,4 +683,20 @@ def my_languages(results):
     y = dict(x)
 
     return [key for key, value in y.items() if value >= 60]
+
+
 #   return sorted((l for l,r in results.items() if r>=60), reverse=True, key=results.get)
+# Grader
+
+
+def grader(score):
+    if 0.9 <= score <= 1:
+        return "A"
+    elif 0.8 <= score < 0.9:
+        return "B"
+    elif 0.7 <= score < 0.8:
+        return "C"
+    elif 0.6 <= score < 0.7:
+        return "D"
+    else:
+        return 'F'
