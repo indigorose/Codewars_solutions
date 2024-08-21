@@ -700,3 +700,10 @@ def grader(score):
         return "D"
     else:
         return 'F'
+
+
+def _if(bool, func1, func2):
+    if bool != True:
+        return func2()
+    else:
+        return func1()
