@@ -707,3 +707,19 @@ def _if(bool, func1, func2):
         return func2()
     else:
         return func1()
+
+
+string = 'help me'
+
+
+def upperCaseString(string):
+    result = ''
+    for i in range(0, len(string)):
+        if i % 2 == 0 and string[i] != " ":
+            result += string[i].upper()
+        else:
+            result += string[i]
+    return result
+
+
+print(upperCaseString(string))
