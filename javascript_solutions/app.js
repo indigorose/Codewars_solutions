@@ -326,3 +326,7 @@ var humanYearsCatYearsDogYears = function (n) {
 function howManyLightsabersDoYouOwn(name) {
 	return name == 'Zach' ? 18 : 0;
 }
+
+function minMax(arr) {
+	return [Math.min(...arr), Math.max(...arr)]; // fix me!
+}
