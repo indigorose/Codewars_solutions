@@ -723,3 +723,18 @@ def upperCaseString(string):
 
 
 print(upperCaseString(string))
+
+
+def high(x):
+    letters = 'abcdefghijklmnopqrstuvwxyz'
+    words = x.split(" ")
+    highScore = 0
+    finalWord = ""
+    for word in words:
+        score = 0
+        for i in word:
+            score += (letters.index(i)+1)
+        if score > highScore:
+            highScore = score
+            finalWord = word
+    return finalWord
