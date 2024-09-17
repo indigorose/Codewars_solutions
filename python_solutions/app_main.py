@@ -738,3 +738,10 @@ def high(x):
             highScore = score
             finalWord = word
     return finalWord
+
+
+def odd_one(arr):
+    for i in arr:
+        if abs(i) % 2 != 0:
+            return arr.index(i)
+    return -1
