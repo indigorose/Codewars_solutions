@@ -745,3 +745,8 @@ def odd_one(arr):
         if abs(i) % 2 != 0:
             return arr.index(i)
     return -1
+
+
+def multiples(m, n):
+    # Implement me!
+    return [i*n for i in range(1, m+1)]
