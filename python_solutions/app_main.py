@@ -750,3 +750,11 @@ def odd_one(arr):
 def multiples(m, n):
     # Implement me!
     return [i*n for i in range(1, m+1)]
+
+
+def divisors(integer):
+    result = [i for i in range(2, integer) if integer % i == 0]
+    if len(result) != 0:
+        return result
+    else:
+        return f'{integer} is prime'
