@@ -764,4 +764,9 @@ def reverse_words(s):
     words.reverse()
     return " ".join(words)
 
+def sum_average(arr):
+    result = 0
+    for i in arr:
+        result += (sum(i)/len(i))
+    return math.floor(result)
 
