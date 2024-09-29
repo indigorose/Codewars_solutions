@@ -352,3 +352,7 @@ function grade(score) {
 	if (score < 0.9) return 'B';
 	return 'A';
 }
+
+function stringToArray(string) {
+	return string.split(' ');
+}
