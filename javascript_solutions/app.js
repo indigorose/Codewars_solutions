@@ -356,3 +356,6 @@ function grade(score) {
 function stringToArray(string) {
 	return string.split(' ');
 }
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+	return distanceToPump <= mpg * fuelLeft ? true : false;
+};
