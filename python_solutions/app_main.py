@@ -758,15 +758,22 @@ def divisors(integer):
         return result
     else:
         return f'{integer} is prime'
-        
+
+
 def reverse_words(s):
     words = s.split(" ")
     words.reverse()
     return " ".join(words)
 
-def sum_average(arr):
-    result = 0
-    for i in arr:
-        result += (sum(i)/len(i))
-    return math.floor(result)
+# def sum_average(arr):
+#     result = 0
+#     for i in arr:
+#         result += (sum(i)/len(i))
+#     return math.floor(result)
 
+
+def min_value(digits):
+    myList = list(dict.fromkeys(digits))
+    myList.sort()
+    return int(''.join(str(y) for y in myList))
+# return int("".join(map(str,sorted(set(digits)))))
