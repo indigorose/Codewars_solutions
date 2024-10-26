@@ -359,3 +359,7 @@ function stringToArray(string) {
 const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
 	return distanceToPump <= mpg * fuelLeft ? true : false;
 };
+
+function greet(name) {
+	return `Hello, ${name} how are you doing today?`;
+}
