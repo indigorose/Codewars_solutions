@@ -18,3 +18,19 @@ function getAverage(marks) {
 	}
 	return Math.floor(sum / marks.length);
 }
+
+var number = function (busStops) {
+	let result = 0;
+	for (let i of busStops) {
+		result += i[0] - i[1];
+	}
+	return result;
+};
+
+console.log(
+	number([
+		[10, 0],
+		[3, 5],
+		[5, 8],
+	])
+);
