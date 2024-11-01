@@ -12,3 +12,16 @@ def maskify(cc):
         return cc
     else:
         return '#' * (len(cc)-4) + lastFour
+
+
+def decode(message):
+    code = 'abcdefghijklmnopqrstuvwxyz'
+    ralpha = 'zyxwvutsrqponmlkjihgfedcba'
+    result = ""
+    for i in message:
+        if i.isalpha():
+            x = ralpha.index(i)
+            result += i.replace(ralpha[x], code[x])
+        else:
+            result += " "
+    return result
