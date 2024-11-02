@@ -777,3 +777,8 @@ def min_value(digits):
     myList.sort()
     return int(''.join(str(y) for y in myList))
 # return int("".join(map(str,sorted(set(digits)))))
+
+
+def vowel_indices(word):
+    # your code here
+    return [ele+1 for ele in range(len(word)) if word[ele].lower() in 'aeiouy']
