@@ -42,3 +42,8 @@ function countBy(x, n) {
 	}
 	return z;
 }
+
+function zipvalidate(postcode) {
+	const pattern = /^[12346][0-9]{5}$/;
+	return pattern.test(postcode) && !isNaN(postcode);
+}

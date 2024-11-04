@@ -782,3 +782,8 @@ def min_value(digits):
 def vowel_indices(word):
     # your code here
     return [ele+1 for ele in range(len(word)) if word[ele].lower() in 'aeiouy']
+
+
+def zipvalidate(postcode):
+    pattern = r'^[12346][0-9]{5}$'
+    return bool(re.match(pattern, postcode) and postcode.isdigit())
