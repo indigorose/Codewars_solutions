@@ -23,3 +23,22 @@ function getSum(a, b) {
 	}
 	return sum;
 }
+
+const twoSums = (arr, target) => {
+	const pairs = [];
+	const pair = {};
+	for (num of arr) {
+		const diff = target - num;
+		if (diff in pair) {
+			pairs.push([num, diff]);
+		} else {
+			pair[num] = true;
+		}
+	}
+	return pairs;
+};
+
+console.log(twoSums([1, 2, 2, 3, 4], 4));
+
+// Test arr = [1, 2, 2, 3, 4], target = 4
+// Result  = [[]]
