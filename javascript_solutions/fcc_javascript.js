@@ -47,3 +47,11 @@ function zipvalidate(postcode) {
 	const pattern = /^[12346][0-9]{5}$/;
 	return pattern.test(postcode) && !isNaN(postcode);
 }
+
+function grow(x) {
+	result = x[0];
+	for (let i = 1; i < x.length; i++) {
+		result *= x[i];
+	}
+	return result;
+}

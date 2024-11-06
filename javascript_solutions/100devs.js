@@ -41,4 +41,4 @@ const twoSums = (arr, target) => {
 console.log(twoSums([1, 2, 2, 3, 4], 4));
 
 // Test arr = [1, 2, 2, 3, 4], target = 4
-// Result  = [[]]
+// Result  = [[2,2] ,[3,1]]
