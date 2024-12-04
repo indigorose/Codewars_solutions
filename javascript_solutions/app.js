@@ -363,3 +363,10 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
 function greet(name) {
 	return `Hello, ${name} how are you doing today?`;
 }
+
+function converter(mpg) {
+	//code to convert miles per imperial gallon to kilometers per liter
+	let kilometers = mpg * 1.609344;
+	let litres = 4.54609188;
+	return Math.floor((kilometers / litres) * 100) / 100;
+}
