@@ -61,3 +61,15 @@ function sumMix(x) {
 // assert.strictEqual(sumMix([9, 3, '7', '3']), 22);
 // assert.strictEqual(sumMix(['5', '0', 9, 3, 2, 1, '9', 6, 7]), 42);
 // assert.strictEqual(sumMix(['3', 6, 6, 0, '5', 8, 5, '6', 2,'0']), 41);
+function highAndLow(numbers) {
+	let numberSplit = numbers.split(' ');
+
+	let numberArray = [];
+	for (let i = 0; i < numberSplit.length; i++) {
+		numberArray.push(parseInt(numberSplit[i]));
+	}
+
+	return `${Math.max(...numberArray)} ${Math.min(...numberArray)}`;
+}
+
+console.log(highAndLow('8 3 -5 42 -1 0 0 -9 4 7 4 -4'));
