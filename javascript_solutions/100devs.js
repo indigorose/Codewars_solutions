@@ -73,3 +73,17 @@ function highAndLow(numbers) {
 }
 
 console.log(highAndLow('8 3 -5 42 -1 0 0 -9 4 7 4 -4'));
+
+function getDivisorsCnt(n) {
+	let count = 0;
+	const squareRoot = Math.sqrt(n);
+	for (let i = 1; i <= squareRoot; i++) {
+		if (n % i == 0) {
+			count += 2;
+			if (i === n / i) {
+				count -= 1;
+			}
+		}
+	}
+	return count;
+}
