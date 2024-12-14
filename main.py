@@ -76,3 +76,10 @@ def add_five(num):
 
 def is_uppercase(inp):
     return True if inp == inp.upper() else False
+
+
+def pillars(num_pill, dist, width):
+    pillar_width = (num_pill*width)  # centimeters
+    first_last = width * 2 if num_pill >= 3 else width*num_pill
+    total_distance = pillar_width + ((dist*100) * (num_pill-1))
+    return (total_distance - first_last)

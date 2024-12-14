@@ -370,3 +370,10 @@ function converter(mpg) {
 	let litres = 4.54609188;
 	return Math.floor((kilometers / litres) * 100) / 100;
 }
+
+function pillars(numPill, dist, width) {
+	let pillarWidth = numPill * width;
+	let firstLast = numPill >= 3 ? width * 2 : width * numPill;
+	let totalDistance = pillarWidth + dist * 100 * (numPill - 1);
+	return totalDistance - firstLast;
+}
