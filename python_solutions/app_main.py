@@ -787,3 +787,11 @@ def vowel_indices(word):
 def zipvalidate(postcode):
     pattern = r'^[12346][0-9]{5}$'
     return bool(re.match(pattern, postcode) and postcode.isdigit())
+
+def round_to_next5(n):  
+    x = n
+    while x%5 !=0:
+        x+=1
+            
+    return x
+
