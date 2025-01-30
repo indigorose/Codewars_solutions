@@ -795,3 +795,6 @@ def round_to_next5(n):
             
     return x
 
+def include(arr, item):
+    return item in arr
+
