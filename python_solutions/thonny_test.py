@@ -1,13 +1,8 @@
 def find_even_index(array):
-    mid = len(array)//2
     x = 0
-
-    
     while x != len(array):
         right = array[x+1:]
         left = array[:x]
-        print(left)
-        print(right)
         if sum(left) == sum(right):
             return x
         else:
