@@ -6,7 +6,7 @@ def find_even_index(array):
         if sum(left) == sum(right):
             return x
         else:
-            mid += 1
+
             x += 1
     return -1
 
@@ -20,3 +20,12 @@ def find_even_index2(arr):
         if sum(arr[:i]) == sum(arr[i+1:]):
             return i
     return -1
+
+
+def initialize_names(name):
+    name_arr = name.split(" ")
+    if len(name_arr) <= 2:
+        return name.title()
+
+
+print(initialize_names("Jack Ryan"))
