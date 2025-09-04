@@ -797,4 +797,6 @@ def round_to_next5(n):
 
 def include(arr, item):
     return item in arr
-
+    
+def hello(name="World"):
+    return f"Hello, {name.title() if name else 'World'}!"
