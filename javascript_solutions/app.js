@@ -385,3 +385,8 @@ function sumNoDuplicates(numList) {
 }
 
 console.log(sumNoDuplicates([1, 1, 2, 3]));
+
+function unusualFive() {
+  return "words".length;
+}
+
