@@ -11,8 +11,8 @@ def find_even_index(array):
     return -1
 
 
-print(find_even_index([1, 100, 50, -51, 1, 1]))
-print(find_even_index([1, 2, 3, 4, 3, 2, 1]))
+#print(find_even_index([1, 100, 50, -51, 1, 1]))
+#print(find_even_index([1, 2, 3, 4, 3, 2, 1]))
 
 
 def find_even_index2(arr):
@@ -28,4 +28,12 @@ def initialize_names(name):
         return name.title()
 
 
-print(initialize_names("Jack Ryan"))
+#print(initialize_names("Jack Ryan"))
+    
+    
+def missing_num(nums):
+    for i in range(0, len(nums)):
+        if nums[i] != i:
+            return i
+    
+print(missing_num([0,1,2,3,5]))
