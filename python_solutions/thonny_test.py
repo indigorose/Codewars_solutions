@@ -32,8 +32,10 @@ def initialize_names(name):
     
     
 def missing_num(nums):
+    nums.sort()
+    print(nums)
     for i in range(0, len(nums)):
         if nums[i] != i:
             return i
     
-print(missing_num([0,1,2,3,5]))
+print(missing_num([0,6,7,1,2,3,5]))
