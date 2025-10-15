@@ -83,3 +83,16 @@ def pillars(num_pill, dist, width):
     first_last = width * 2 if num_pill >= 3 else width*num_pill
     total_distance = pillar_width + ((dist*100) * (num_pill-1))
     return (total_distance - first_last)
+    
+    
+    
+
+def tower_builder(n_floors):
+    # build here
+    tower=[]
+    for i in range(n_floors):
+        spaces = " " * (n_floors - i - 1)
+        stars = "*" * (2 * i + 1)
+        tower.append(spaces + stars + spaces)
+
+    return tower
