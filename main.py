@@ -96,3 +96,7 @@ def tower_builder(n_floors):
         tower.append(spaces + stars + spaces)
 
     return tower
+    
+def wrap(value):
+    return {"value":value}
+# debugged {value:value}
