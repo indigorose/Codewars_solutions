@@ -100,3 +100,7 @@ def tower_builder(n_floors):
 def wrap(value):
     return {"value":value}
 # debugged {value:value}
+
+def ensure_question(s):
+    # Code here
+    return f"{s}?" if s=="" or s[-1] != "?" else s
