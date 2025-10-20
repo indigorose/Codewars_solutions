@@ -378,15 +378,14 @@
 // 	return totalDistance - firstLast;
 // }
 
-function sumNoDuplicates(numList) {
-	return numList
-		.filter((i) => numList.filter((j) => i === j).length === 1)
-		.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-}
+// function sumNoDuplicates(numList) {
+// 	return numList
+// 		.filter((i) => numList.filter((j) => i === j).length === 1)
+// 		.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+// }
 
-console.log(sumNoDuplicates([1, 1, 2, 3]));
+// console.log(sumNoDuplicates([1, 1, 2, 3]));
 
-function unusualFive() {
-  return "words".length;
-}
-
+// function unusualFive() {
+//   return "words".length;
+// }
