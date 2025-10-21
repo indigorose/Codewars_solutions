@@ -389,3 +389,9 @@
 // function unusualFive() {
 //   return "words".length;
 // }
+
+function missingNo(nums) {
+  totalSum = 5050
+  return 5050 - nums.reduce((partialSum, a) => partialSum + a, 0)
+}
+
