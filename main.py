@@ -104,3 +104,11 @@ def wrap(value):
 def ensure_question(s):
     # Code here
     return f"{s}?" if s=="" or s[-1] != "?" else s
+
+def correct(s):
+    res=s
+    keys={"5":"S", "0":"O", "1":"I"}
+    for key, value in keys.items():
+        res = res.replace(key, value)
+    return res
+
