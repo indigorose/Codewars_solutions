@@ -112,3 +112,8 @@ def correct(s):
         res = res.replace(key, value)
     return res
 
+
+def period_is_late(last,today,cycle_length):
+    d = today-last
+    return d.days > cycle_length
+
