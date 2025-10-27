@@ -1,3 +1,6 @@
+import random
+
+
 def find_smallest_int(arr):
     # Code here
     return min(arr)
@@ -83,37 +86,45 @@ def pillars(num_pill, dist, width):
     first_last = width * 2 if num_pill >= 3 else width*num_pill
     total_distance = pillar_width + ((dist*100) * (num_pill-1))
     return (total_distance - first_last)
-    
-    
-    
+
 
 def tower_builder(n_floors):
     # build here
-    tower=[]
+    tower = []
     for i in range(n_floors):
         spaces = " " * (n_floors - i - 1)
         stars = "*" * (2 * i + 1)
         tower.append(spaces + stars + spaces)
 
     return tower
-    
+
+
 def wrap(value):
-    return {"value":value}
+    return {"value": value}
 # debugged {value:value}
+
 
 def ensure_question(s):
     # Code here
-    return f"{s}?" if s=="" or s[-1] != "?" else s
+    return f"{s}?" if s == "" or s[-1] != "?" else s
+
 
 def correct(s):
-    res=s
-    keys={"5":"S", "0":"O", "1":"I"}
+    res = s
+    keys = {"5": "S", "0": "O", "1": "I"}
     for key, value in keys.items():
         res = res.replace(key, value)
     return res
 
 
-def period_is_late(last,today,cycle_length):
+def period_is_late(last, today, cycle_length):
     d = today-last
     return d.days > cycle_length
 
+
+class Ghost(object):
+    colors = ['white', 'yellow', 'purple', 'red']
+
+    @property
+    def color(self):
+        return random.choice(self.colors)
