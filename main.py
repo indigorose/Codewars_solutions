@@ -128,3 +128,8 @@ class Ghost(object):
     @property
     def color(self):
         return random.choice(self.colors)
+
+# import sys
+# def total_bytes(obj):
+    #return sys.getsizeof(obj)
+
