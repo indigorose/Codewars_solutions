@@ -1,4 +1,5 @@
 import random
+import math
 
 
 def find_smallest_int(arr):
@@ -131,19 +132,24 @@ class Ghost(object):
 
 # import sys
 # def total_bytes(obj):
-    #return sys.getsizeof(obj)
+    # return sys.getsizeof(obj)
+
+
 def repeat_sum(l):
     y = []
     for lst in l:
         y.append(list(set(lst)))
-    
-    r=[]
+
+    r = []
     for i in y:
         for j in i:
             r.append(j)
-    #print(r)
-    dic={k:r.count(k) for k in r if r.count(k) >= 2}
-    #print(dic)
+    # print(r)
+    dic = {k: r.count(k) for k in r if r.count(k) >= 2}
+    # print(dic)
     return sum(dic.keys())
 
 
+def cup_volume(d1, d2, height):
+    volume = (math.pi * height / 12) * (d1**2 + d1*d2 + d2**2)
+    return round(volume, 2)
