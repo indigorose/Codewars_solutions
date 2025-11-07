@@ -153,3 +153,13 @@ def repeat_sum(l):
 def cup_volume(d1, d2, height):
     volume = (math.pi * height / 12) * (d1**2 + d1*d2 + d2**2)
     return round(volume, 2)
+
+
+def multiplication_table(size):
+    result=[]
+    for i in range(1, size+1):
+        result.append([i*j for j in range(1, size+1)])
+            
+    return result
+  
+print(multiplication_table(3))
