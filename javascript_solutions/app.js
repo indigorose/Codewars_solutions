@@ -391,7 +391,13 @@
 // }
 
 function missingNo(nums) {
-  totalSum = 5050
-  return 5050 - nums.reduce((partialSum, a) => partialSum + a, 0)
+	totalSum = 5050;
+	return 5050 - nums.reduce((partialSum, a) => partialSum + a, 0);
 }
 
+function reverse(string) {
+	//your code here
+	let x = string.split(' ');
+	x.reverse();
+	return x.join(' ');
+}
