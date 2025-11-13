@@ -401,3 +401,8 @@ function reverse(string) {
 	x.reverse();
 	return x.join(' ');
 }
+
+function duckDuckGoose(players, goose) {
+  // ...
+  return players[(goose-1)%players.length].name
+}
