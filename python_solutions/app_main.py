@@ -800,3 +800,8 @@ def include(arr, item):
     
 def hello(name="World"):
     return f"Hello, {name.title() if name else 'World'}!"
+
+def polygon_area(a, b, c, d):
+    return (a*b)+((b*(c-a))/2)
+
+
