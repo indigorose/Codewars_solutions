@@ -805,3 +805,6 @@ def polygon_area(a, b, c, d):
     return (a*b)+((b*(c-a))/2)
 
 
+def bonus_time(salary, bonus):
+    #your code here
+    return f"${salary * 10}" if bonus == True else f'${salary}'
