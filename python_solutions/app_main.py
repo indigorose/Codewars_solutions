@@ -808,3 +808,10 @@ def polygon_area(a, b, c, d):
 def bonus_time(salary, bonus):
     #your code here
     return f"${salary * 10}" if bonus == True else f'${salary}'
+    
+    def swap_values(args): 
+    return args.reverse()
+    # instead of args[0]=args[1]
+    
+    
+    
