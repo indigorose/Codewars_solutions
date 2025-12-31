@@ -403,6 +403,12 @@ function reverse(string) {
 }
 
 function duckDuckGoose(players, goose) {
-  // ...
-  return players[(goose-1)%players.length].name
+	// ...
+	return players[(goose - 1) % players.length].name;
+}
+
+function validatePIN(pin) {
+	//return true or false
+	const myRe = /^(\d{4}|\d{6})$/;
+	return myRe.test(pin);
 }
