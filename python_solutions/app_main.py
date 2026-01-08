@@ -788,30 +788,37 @@ def zipvalidate(postcode):
     pattern = r'^[12346][0-9]{5}$'
     return bool(re.match(pattern, postcode) and postcode.isdigit())
 
-def round_to_next5(n):  
+
+def round_to_next5(n):
     x = n
-    while x%5 !=0:
-        x+=1
-            
+    while x % 5 != 0:
+        x += 1
+
     return x
+
 
 def include(arr, item):
     return item in arr
-    
+
+
 def hello(name="World"):
     return f"Hello, {name.title() if name else 'World'}!"
+
 
 def polygon_area(a, b, c, d):
     return (a*b)+((b*(c-a))/2)
 
 
 def bonus_time(salary, bonus):
-    #your code here
+    # your code here
     return f"${salary * 10}" if bonus == True else f'${salary}'
-    
-    def swap_values(args): 
+
+
+def swap_values(args):
     return args.reverse()
     # instead of args[0]=args[1]
-    
+
+ def player_rank_up(pts):
+     return 'Well done! You have advanced to the qualifying stage. Win 2 out of your next 3 games to rank up.' if pts >= 100 else False   
     
     
