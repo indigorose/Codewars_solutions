@@ -818,7 +818,6 @@ def swap_values(args):
     return args.reverse()
     # instead of args[0]=args[1]
 
- def player_rank_up(pts):
-     return 'Well done! You have advanced to the qualifying stage. Win 2 out of your next 3 games to rank up.' if pts >= 100 else False   
-    
-    
+
+def player_rank_up(pts):
+    return 'Well done! You have advanced to the qualifying stage. Win 2 out of your next 3 games to rank up.' if pts >= 100 else False
