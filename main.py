@@ -163,3 +163,14 @@ def multiplication_table(size):
     return result
   
 print(multiplication_table(3))
+
+
+def compare_energy(calories_burned, watt_hours_used):
+    if (calories_burned * 4184) > (watt_hours_used * 3600):
+        return "Workout"
+    elif (calories_burned * 4184) < (watt_hours_used * 3600):
+        return "Devices"
+    else:
+        return "Equal"
+
+
