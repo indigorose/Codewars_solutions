@@ -412,3 +412,10 @@ function validatePIN(pin) {
 	const myRe = /^(\d{4}|\d{6})$/;
 	return myRe.test(pin);
 }
+
+let Ghost = function() {
+  // your code goes here
+  const colors = ['white', 'yellow', 'purple', 'red']
+  let i = Math.floor(Math.random() * colors.length)
+  this.color = colors[i]
+  }
