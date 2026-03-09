@@ -7,24 +7,26 @@ const caseInsensitiveFlag = document.getElementById('i');
 const globalFlag = document.getElementById('g');
 
 const getFlags = () => {
-	if (caseInsensitiveFlag.checked && globalFlag.checked) {
-		console.log('ig clicked');
-		return 'ig';
-	} else if (globalFlag.checked) {
-		console.log('g clicked');
-		return 'g';
-	} else if (caseInsensitiveFlag.checked) {
-		console.log('i clicked');
-		return 'i';
-	} else {
-		console.log('empty sting');
-		return '';
-	}
+	let flags = '';
+	if (caseInsensitiveFlag.checked) flags += 'i';
+	if (globalFlag.checked) flags += 'g';
+	return flags;
 };
 
 testButton.addEventListener('click', () => {
-	getFlags();
-	const testRegex = regexPattern.value;
-	console.log(stringToTest.innerHTML);
-	console.log(testRegex);
+	const flags = getFlags();
+	const pattern = regexPattern.value;
+	const text = stringToTest.textContent || stringToTest.innerText;
+	const regex = new RegExp(pattern, flags);
+	const matches = text.match(regex);
+	const highlighted = text.replace(regex, (match) => {
+		return `<span class="highlight">${match}</span>`;
+	});
+
+	if (highlighted === text || !matches) {
+		testResult.innerHTML = 'no match';
+	} else {
+		stringToTest.innerHTML = highlighted;
+		testResult.innerHTML = matches.join(', ');
+	}
 });
