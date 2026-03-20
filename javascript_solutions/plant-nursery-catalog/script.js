@@ -43,3 +43,19 @@ catalog.set(imperialGem, { small: 19, medium: 35, large: 28 });
 catalog.set(royalCrown, { small: 40, medium: 22, large: 9 });
 
 console.log(catalog);
+const getBallerina = catalog.get(ballerina);
+console.log(getBallerina);
+getBallerina.small = 18;
+
+const sellPlants = (plantObj, potSize, potsNum) => {
+	const plant = catalog.get(plantObj);
+
+	console.log(plant[potSize]);
+
+	if (potsNum > plant[potSize]) {
+		return `Not enough ${potSize} size pots for ${plantObj.scientificName} '${plantObj.cultivar}'. Only ${plant[potSize]} left.`;
+	}
+};
+
+console.log(sellPlants(ballerina, 'small', 25));
+console.log(catalog);
