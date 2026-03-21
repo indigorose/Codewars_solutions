@@ -42,20 +42,54 @@ catalog.set(hidcote, { small: 33, medium: 13, large: 18 });
 catalog.set(imperialGem, { small: 19, medium: 35, large: 28 });
 catalog.set(royalCrown, { small: 40, medium: 22, large: 9 });
 
-console.log(catalog);
-const getBallerina = catalog.get(ballerina);
-console.log(getBallerina);
-getBallerina.small = 18;
+const removePlant = (plant) => catalog.delete(plant);
 
-const sellPlants = (plantObj, potSize, potsNum) => {
-	const plant = catalog.get(plantObj);
-
-	console.log(plant[potSize]);
-
-	if (potsNum > plant[potSize]) {
-		return `Not enough ${potSize} size pots for ${plantObj.scientificName} '${plantObj.cultivar}'. Only ${plant[potSize]} left.`;
+const sellPlants = (plant, size, potsNo) => {
+	if (!catalog.has(plant)) return 'Item not found.';
+	const name = `${plant.scientificName} '${plant.cultivar}'`;
+	const pots = catalog.get(plant);
+	if (pots[size] - potsNo < 0) {
+		return `Not enough ${size} size pots for ${name}. Only ${pots[size]} left.`;
 	}
+	pots[size] -= potsNo;
+	return `Catalog successfully updated.`;
 };
 
-console.log(sellPlants(ballerina, 'small', 25));
-console.log(catalog);
+// const displayCatalog = () => {
+// 	for (const key of catalog.keys()) {
+// 		console.log(key);
+// 	}
+// };
+// const displayCatalog = () => {
+// 	for (const value of catalog.values()) {
+// 		console.log(value);
+// 	}
+// };
+// const displayCatalog = () => {
+// 	for (const val of catalog.entries()) {
+// 		console.log(val);
+// 	}
+// };
+const displayCatalog = () => {
+	let output = '';
+
+	catalog.forEach((val, key) => {
+		output += `${key.scientificName} '${key.cultivar}': ${val.small} S, ${val.medium} M, ${val.large} L\n`;
+	});
+
+	return output;
+};
+// console.log(displayCatalog());
+
+// console.log(removePlant(ballerina));
+// console.log(sellPlants(ballerina, 'small', 10));
+// console.log(catalog);
+const displayPlantsSet = () => {
+	const catalogSet = new Set();
+	catalogSet.add(ballerina);
+
+	return catalogSet;
+};
+
+const plantsSet = displayPlantsSet();
+console.log(plantsSet);
