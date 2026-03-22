@@ -41,9 +41,7 @@ catalog.set(willowVale, { small: 3, medium: 5, large: 0 });
 catalog.set(hidcote, { small: 33, medium: 13, large: 18 });
 catalog.set(imperialGem, { small: 19, medium: 35, large: 28 });
 catalog.set(royalCrown, { small: 40, medium: 22, large: 9 });
-
-const removePlant = (plant) => catalog.delete(plant);
-
+// const removePlant = (plant) => catalog.delete(plant);
 const sellPlants = (plant, size, potsNo) => {
 	if (!catalog.has(plant)) return 'Item not found.';
 	const name = `${plant.scientificName} '${plant.cultivar}'`;
@@ -54,7 +52,6 @@ const sellPlants = (plant, size, potsNo) => {
 	pots[size] -= potsNo;
 	return `Catalog successfully updated.`;
 };
-
 // const displayCatalog = () => {
 // 	for (const key of catalog.keys()) {
 // 		console.log(key);
@@ -70,26 +67,33 @@ const sellPlants = (plant, size, potsNo) => {
 // 		console.log(val);
 // 	}
 // };
+
+const removePlant = (plant) => catalog.delete(plant);
+
 const displayCatalog = () => {
-	let output = '';
-
+	let catalogString = '';
 	catalog.forEach((val, key) => {
-		output += `${key.scientificName} '${key.cultivar}': ${val.small} S, ${val.medium} M, ${val.large} L\n`;
+		catalogString += `${key.scientificName} '${key.cultivar}': ${val.small} S, ${val.medium} M, ${val.large} L
+`;
 	});
-
-	return output;
+	return catalogString;
 };
-// console.log(displayCatalog());
 
-// console.log(removePlant(ballerina));
-// console.log(sellPlants(ballerina, 'small', 10));
-// console.log(catalog);
+// const displayPlantsSet = () => {
+// 	const catalogSet = new Set();
+// 	catalogSet.add(ballerina);
+// 	catalogSet.add(ballerina);
+// 	catalogSet.add(prettyPolly);
+// 	return catalogSet;
+// };
 const displayPlantsSet = () => {
-	const catalogSet = new Set();
-	catalogSet.add(ballerina);
-
+	const commonName = Array.from(catalog.keys()).map(
+		(plant) => plant.commonName,
+	);
+	const catalogSet = new Set(commonName);
 	return catalogSet;
 };
-
 const plantsSet = displayPlantsSet();
+// plantsSet.clear();
+// console.log(plantsSet.has(ballerina));
 console.log(plantsSet);
