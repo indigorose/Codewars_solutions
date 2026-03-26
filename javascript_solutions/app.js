@@ -413,14 +413,13 @@ function validatePIN(pin) {
 	return myRe.test(pin);
 }
 
-let Ghost = function() {
-  // your code goes here
-  const colors = ['white', 'yellow', 'purple', 'red']
-  let i = Math.floor(Math.random() * colors.length)
-  this.color = colors[i]
-  }
-		
-		
+let Ghost = function () {
+	// your code goes here
+	const colors = ['white', 'yellow', 'purple', 'red'];
+	let i = Math.floor(Math.random() * colors.length);
+	this.color = colors[i];
+};
+
 const calorieCounter = document.getElementById('calorie-counter');
 const budgetNumberInput = document.getElementById('budget');
 const entryDropdown = document.getElementById('entry-dropdown');
@@ -430,7 +429,21 @@ const output = document.getElementById('output');
 let isError = false;
 
 function cleanInputString(str) {
-  const regex = /[+-\s]/g;
-  return str.replace(regex, '');
+	const regex = /[+-\s]/g;
+	return str.replace(regex, '');
 }
 
+function hasNoRepeats(str) {
+	const charCount = (str) =>
+		[...str].reduce((acc, char) => {
+			acc[char] = (acc[char] || 0) + 1;
+			return acc;
+		}, {});
+
+	for (const [char, count] of Object.entries(charCount(str))) {
+		if (count > 1) return false;
+	}
+	return true;
+}
+
+console.log(hasNoRepeats('The quick brown fox jumped over the lazy dog.'));
