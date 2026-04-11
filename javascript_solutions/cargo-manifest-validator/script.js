@@ -60,64 +60,13 @@ function normalizeUnits(manifest) {
 	return manifest;
 }
 
-// function validateManifest(manifest) {
-// 	const errors = {};
-// 	const checks = {
-// 		containerId: (value) =>
-// 			value === undefined
-// 				? 'Missing'
-// 				: !Number.isInteger(value) || value < 1
-// 					? 'Invalid'
-// 					: true,
-
-// 		destination: (value) =>
-// 			value === undefined
-// 				? 'Missing'
-// 				: typeof value !== 'string' || value.trim().length === 0
-// 					? 'Invalid'
-// 					: true,
-
-// 		weight: (value) =>
-// 			value === undefined
-// 				? 'Missing'
-// 				: typeof value !== 'number' || Number.isNaN(value) || value < 0
-// 					? 'Invalid'
-// 					: true,
-
-// 		unit: (value) =>
-// 			value === undefined
-// 				? 'Missing'
-// 				: !['kg', 'lb'].includes(value)
-// 					? 'Invalid'
-// 					: true,
-
-// 		hazmat: (value) =>
-// 			value === undefined
-// 				? 'Missing'
-// 				: typeof value !== 'boolean'
-// 					? 'Invalid'
-// 					: true,
-// 	};
-// 	for (const key in checks) {
-// 		if (!(key in manifest)) {
-// 			errors[key] = 'Missing';
-// 			continue;
-// 		}
-
-// 		const value = manifest[key];
-// 		const result = checks[key](value);
-
-// 		if (result !== true) {
-// 			errors[key] = result;
-// 		}
-// 	}
-
-// 	return errors;
-// }
+// console.log(normalizeUnits(testCargo));
+// console.log(
+// 	'should equal { containerId: 68, destination: "Salinas", weight: 45.45, unit: "kg", hazmat: true }',
+// );
 
 function validateManifest(manifest) {
 	const errors = {};
-
 	const checks = {
 		containerId: (value) =>
 			value === undefined
@@ -154,25 +103,15 @@ function validateManifest(manifest) {
 					? 'Invalid'
 					: true,
 	};
-
-	// handle non-object input
-	if (!manifest || typeof manifest !== 'object') {
-		for (const key in checks) {
-			errors[key] = 'Missing';
-		}
-		return errors;
-	}
-
-	// detect unexpected properties
-	for (const key in manifest) {
-		if (!(key in checks)) {
-			errors[key] = 'Invalid';
-		}
-	}
-
-	// validate expected properties
 	for (const key in checks) {
-		const result = checks[key](manifest[key]);
+		if (!(key in manifest)) {
+			errors[key] = 'Missing';
+			continue;
+		}
+
+		const value = manifest[key];
+		const result = checks[key](value);
+
 		if (result !== true) {
 			errors[key] = result;
 		}
@@ -232,9 +171,30 @@ console.log(
 	}),
 );
 
-function processManifest(manifest) {}
+function processManifest(manifest) {
+	const result = validateManifest(manifest);
+	const isResultEmpty = (objectName) => {
+		return Object.keys(objectName).length === 0;
+	};
+	if (isResultEmpty(result)) {
+		const totalWeight = normalizeUnits(manifest);
+		console.log(`Validation success: ${manifest.containerId}`);
+		console.log(`Total weight: ${totalWeight.weight} kg`);
+	} else {
+		console.log(`Validation error: ${manifest.containerId}`);
+		console.log(result);
+	}
+}
 
-// console.log(normalizeUnits(testCargo));
-// console.log(
-// 	'should equal { containerId: 68, destination: "Salinas", weight: 45.45, unit: "kg", hazmat: true }',
-// );
+const testProcess = {
+	containerId: 55,
+	destination: 'Carmel',
+	weight: 400,
+	unit: 'lb',
+	hazmat: false,
+};
+
+console.log(
+	' Calling processManifest() with { containerId: 55, destination: "Carmel", weight: 400, unit: "lb", hazmat: false } should first log "Validation success: 55" and then log "Total weight: 180 kg".',
+);
+console.log(processManifest(testProcess));
