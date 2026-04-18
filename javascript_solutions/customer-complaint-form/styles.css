@@ -45,3 +45,13 @@ textarea {
 #clear-btn {
 	margin: 10px 15px 0;
 }
+
+#complaint-description-container,
+#solution-description-container {
+	display: none;
+}
+
+#complaint-description-container.visible,
+#solution-description-container.visible {
+	display: block;
+}

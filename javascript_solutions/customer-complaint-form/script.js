@@ -89,25 +89,59 @@ form.addEventListener('submit', (event) => {
 	}
 });
 
-[
-	(fullName,
-	email,
-	orderNo,
-	productCode,
-	quantity,
-	complaintDescription,
-	solutionDescription),
-].forEach((field) => {
-	field.addEventListener('change', () => {
-		const results = validateForm();
-		const key =
-			field.id === 'complaint-description'
-				? 'complaint-description'
-				: field.id === 'solution-description'
-					? 'solution-description'
-					: field.id;
-		highlightField(field, results[key]);
-	});
+fullName.addEventListener('change', () => {
+	const results = validateForm();
+	const key =
+		fullName === 'complaint-description'
+			? 'complaint-description'
+			: fullName === 'solution-description'
+				? 'solution-description'
+				: fullName;
+	highlightField(fullName, results['full-name']);
+});
+
+email.addEventListener('change', () => {
+	const results = validateForm();
+	const key =
+		email === 'complaint-description'
+			? 'complaint-description'
+			: email === 'solution-description'
+				? 'solution-description'
+				: email;
+	highlightField(email, results['email']);
+});
+
+orderNo.addEventListener('change', () => {
+	const results = validateForm();
+	const key =
+		orderNo === 'complaint-description'
+			? 'complaint-description'
+			: orderNo === 'solution-description'
+				? 'solution-description'
+				: orderNo;
+	highlightField(orderNo, results['order-no']);
+});
+
+quantity.addEventListener('change', () => {
+	const results = validateForm();
+	const key =
+		quantity === 'complaint-description'
+			? 'complaint-description'
+			: quantity === 'solution-description'
+				? 'solution-description'
+				: quantity;
+	highlightField(quantity, results['quantity']);
+});
+
+productCode.addEventListener('change', () => {
+	const results = validateForm();
+	const key =
+		productCode === 'complaint-description'
+			? 'complaint-description-container'
+			: productCode === 'solution-description'
+				? 'solution-description'
+				: productCode;
+	highlightField(productCode, results['product-code']);
 });
 
 complaintsFieldset.addEventListener('change', () => {
@@ -119,7 +153,7 @@ complaintsFieldset.addEventListener('change', () => {
 	if (otherComplaintChecked) {
 		highlightField(complaintDescription, results['complaint-description']);
 	} else {
-		complaintDescription.style.borderColor = ''; // reset when Other is unchecked
+		complaintDescription.style.borderColor = '';
 	}
 });
 
@@ -129,10 +163,13 @@ solutionsFieldset.addEventListener('change', () => {
 
 	const otherSolutionChecked =
 		document.getElementById('other-solution').checked;
+	const container = document.getElementById('solution-description-container');
 	if (otherSolutionChecked) {
+		container.classList.add('visible');
 		highlightField(solutionDescription, results['solution-description']);
 	} else {
-		solutionDescription.style.borderColor = ''; // reset when Other is not selected
+		container.classList.remove('visible');
+		solutionDescription.style.borderColor = '';
 	}
 });
 solutionDescription.addEventListener('change', () => {
