@@ -11,8 +11,8 @@ const solutionsFieldset = document.getElementById('solutions-group');
 
 function validateForm() {
 	const isFullName = fullName.value.trim() !== '';
-	const isEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(email.value);
-	const isOrderNo = /^(2024)\d{6}$/g.test(orderNo.value);
+	const isEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email.value);
+	const isOrderNo = /^(2024)\d{6}$/.test(orderNo.value);
 	const isProductCode = /^[a-zA-Z]{2}\d{2}-[a-zA-Z]\d{3}-[a-zA-Z]{2}\d$/.test(
 		productCode.value,
 	);
@@ -31,7 +31,7 @@ function validateForm() {
 		? complaintDescription.value.trim().length >= 20
 		: true;
 	const checkedSolution = document.querySelector(
-		'input[name="solution"]:checked',
+		'input[name="solutions"]:checked',
 	);
 	const isSolutionsGroup = checkedSolution !== null;
 	const otherSolutionChecked =
@@ -156,6 +156,13 @@ complaintsFieldset.addEventListener('change', () => {
 		complaintDescription.style.borderColor = '';
 	}
 });
+complaintDescription.addEventListener('change', () => {
+	const otherComplaintChecked =
+		document.getElementById('other-complaint').checked;
+	if (!otherComplaintChecked) return;
+	const results = validateForm();
+	highlightField(complaintDescription, results['complaint-description']);
+});
 
 solutionsFieldset.addEventListener('change', () => {
 	const results = validateForm();
@@ -178,12 +185,4 @@ solutionDescription.addEventListener('change', () => {
 	if (!otherSolutionChecked) return;
 	const results = validateForm();
 	highlightField(solutionDescription, results['solution-description']);
-});
-
-complaintDescription.addEventListener('change', () => {
-	const otherComplaintChecked =
-		document.getElementById('other-complaint').checked;
-	if (!otherComplaintChecked) return;
-	const results = validateForm();
-	highlightField(complaintDescription, results['complaint-description']);
 });
