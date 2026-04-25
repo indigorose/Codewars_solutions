@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<main class="container">
+			<div class="drum-machine" id="drum-machine">
+				<div class="pad-bank" id="pad-bank">
+					<button class="drum-pad" id="heater-1">
+						Q
+						<audio
+							class="clip"
+							id="Q"
+							src="https://cdn.freecodecamp.org/curriculum/drum/Heater-1.mp3"
+						></audio>
+					</button>
+					<button class="drum-pad" id="heater-2">
+						W
+						<audio
+							class="clip"
+							src="https://cdn.freecodecamp.org/curriculum/drum/Heater-2.mp3"
+							id="W"
+						></audio>
+					</button>
+					<button class="drum-pad" id="heater-3">
+						E
+						<audio
+							class="clip"
+							src="https://cdn.freecodecamp.org/curriculum/drum/Heater-3.mp3"
+							id="E"
+						></audio>
+					</button>
+					<button class="drum-pad" id="heater-4">
+						A
+						<audio
+							class="clip"
+							src="https://cdn.freecodecamp.org/curriculum/drum/Heater-4_1.mp3"
+							id="A"
+						></audio>
+					</button>
+					<button class="drum-pad" id="clap">
+						S
+						<audio
+							class="clip"
+							src="https://cdn.freecodecamp.org/curriculum/drum/Heater-6.mp3"
+							id="S"
+						></audio>
+					</button>
+					<button class="drum-pad" id="open-hh">
+						D
+						<audio
+							class="clip"
+							src="https://cdn.freecodecamp.org/curriculum/drum/Dsc_Oh.mp3"
+							id="D"
+						></audio>
+					</button>
+					<button class="drum-pad" id="kick-n-hat">
+						Z
+						<audio
+							class="clip"
+							src="https://cdn.freecodecamp.org/curriculum/drum/Kick_n_Hat.mp3"
+							id="Z"
+						></audio>
+					</button>
+					<button class="drum-pad" id="kick">
+						X
+						<audio
+							class="clip"
+							src="https://cdn.freecodecamp.org/curriculum/drum/RP4_KICK_1.mp3"
+							id="X"
+						></audio>
+					</button>
+					<button class="drum-pad" id="closed-hh">
+						C
+						<audio
+							class="clip"
+							src="https://cdn.freecodecamp.org/curriculum/drum/Cev_H2.mp3"
+							id="C"
+						></audio>
+					</button>
+				</div>
+				<p class="display" id="display">Heater-1</p>
+				<datalist id="volumes">
+					<option value="0.0" label="Mute"></option>
+					<option value="1.0" label="100%"></option>
+				</datalist>
+			</div>
+		</main>
+	</body>
+	<script src="script.js"></script>
+</html>
