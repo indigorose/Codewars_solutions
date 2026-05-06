@@ -1,0 +1,1 @@
+function getBookmarks(bookmarks) {}
